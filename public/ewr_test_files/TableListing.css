@@ -1,0 +1,135 @@
+.tableListingTable
+{
+	margin:0px;
+	padding:0px;	
+	text-align:center;
+	background: #FFFFFF;
+	font-family: Tahoma, Arial, Verdana, sans-serif;
+	font-size: 8pt;
+}
+
+.tableListingTable th
+{
+	background-color:#EDECEA;
+	border:1px solid #1D2030;
+	padding: 2px;
+	font-weight:bold;
+	font-family: Tahoma, Arial, Verdana, sans-serif;
+	font-size: 8pt;
+}
+
+.tableListingTable td
+{
+	border-left:1px solid #1D2030;
+	border-right:1px solid #1D2030;
+	border-bottom:1px dotted #1D2030;
+	padding: 2px;
+	font-family: Tahoma, Arial, Verdana, sans-serif;
+	font-size: 8pt;
+}
+.tableListingTable .lastRow td
+{
+	border-bottom:1px solid #1D2030;
+}
+.tableListingTable .tableListingTableNoBorderNoPadding
+{
+	border:0px;
+	margin:0px;
+	padding:0px;
+	line-height:0px;
+	font-size:0px;
+}
+.tableListingTable .tableListingHeaderNoBottomBorder
+{
+	border:1px solid #1D2030;
+	border-bottom:0px;
+}
+.tableListingTable .tableListingHeaderNoBottomBorderRightBorder
+{
+	border:1px solid #1D2030;
+	border-bottom:0px;
+}
+.tableListingTable .tableListingHeaderNoTopBorder
+{
+	border:1px solid #1D2030;
+	border-top:0px;
+}
+.tableListingTable .tableListingHeaderNoTopBorderRightBorder
+{
+	border:1px solid #1D2030;
+	border-top:0px;
+}
+.tableListingTable .tableListingHeaderNoTopNoRightBorder
+{
+	border:1px solid #1D2030;
+	border-top:0px;
+	border-right:0px;
+}
+.tableListingTable .tableListingHeaderNoTopNoLeftBorder
+{
+	border:1px solid #1D2030;
+	border-top:0px;
+	border-left:0px;
+}
+.tableListingTable .tableListingHeaderNoBottomNoRightBorder
+{
+	border:1px solid #1D2030;
+	border-bottom:0px;
+	border-right:0px;
+}
+.tableListingTable .tableListingHeaderBottomBorder
+{
+	border:1px solid #1D2030;
+	border-top:0px;
+	border-left:0px;
+	border-right:0px;
+}
+.tableListingTable .tableListingTableNoLeftBorder
+{
+	border-left:0px;
+}
+.tableListingTable .tableListingTableNoRightBorder
+{
+	border-right:0px;
+}
+
+.tableListingTable .tableListingHeader2NoBorder
+{
+	border-right:0px;
+	border-bottom:2px solid #A0A0A0;
+	border-top:0px;
+	padding: 2px;
+}
+.tableListingTable .tableListingHeader2
+{
+	border-right:1px solid #CECECE;
+	border-bottom:2px solid #A0A0A0;
+	border-top:0px;
+	padding: 2px;
+}
+.tableListingTable .tableListingTableRightCol
+{
+	border-right:0px;
+	border-right:1px solid #1D2030;
+	padding: 2px;
+}
+
+.tableListingTable .tableListingTableNoBorder
+{
+	border: 0px;
+	padding: 2px;
+}
+.legend
+{
+	background: #EDECEA;
+}
+.legend td
+{
+	padding: 2px;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 9pt;
+}
+.legend td img
+{
+	vertical-align: middle;
+}				

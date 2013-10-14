@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  city: MyString
+  country: MyString
+  continent: MyString
+  departure: 2013-10-12 18:59:18
+
+two:
+  city: MyString
+  country: MyString
+  continent: MyString
+  departure: 2013-10-12 18:59:18
