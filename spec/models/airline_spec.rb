@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Author do 
+describe Airline do 
 	before :each do 
 
-
+	end
 end
 
-describe 
+ 
