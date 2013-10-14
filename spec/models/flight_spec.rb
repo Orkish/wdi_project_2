@@ -24,12 +24,12 @@ describe Flight do
 		assert @flight.departure
 	end
 
-	it "should receive an airline" do
+	it "should belong to an airline" do
 		@airline.flights << @flight
 		@airline.flights.first.should eq(@flight)
 	end
 
-	it "should receive an airport" do
+	it "should belong to an an airport" do
 		@airport.flights << @flight
 		@airport.flights.first.should eq(@flight)
 	end
