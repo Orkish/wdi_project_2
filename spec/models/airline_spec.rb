@@ -5,7 +5,7 @@ describe Airline do
 		@airline = Airline.new(name: "United")
 		@flight = Flight.new(city: "Saint Louis", country: "US", continent: "NA", departure: "2000-01-01 00:00:00", airport_id: "1")
 		@airport = Airport.new(name: "EWR")
-		# @airline.airport << @airport
+		# @airline.airports << @airport
 	end
 
 	describe "#name" do

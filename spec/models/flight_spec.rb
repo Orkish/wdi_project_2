@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Flight do 
 	## see if any of these flights exist
 	before :each do 
-		@flight = Flight.new
+		@flight = Flight.new(city: "Saint Louis", country: "US", continent: "NA", departure: "000-01-01 00:00:00", airport_id: "1")
 	end
 	
 	it "should have an id" do 
