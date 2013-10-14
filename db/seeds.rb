@@ -33,7 +33,9 @@ while m < 6 do # Test Loop
 				continent_code = Continent.by_alpha_2_code(country_code)[:continent_codes][0]
 				if time && place	# if number 3
 					adjusted_time = Time.strptime(time, "%I:%M %P").strftime("%H:%M")
-					Flight.create(city: place, departure: adjusted_time, continent: continent_code, country: country_code)
+					flight1 = Flight.create(city: place, departure: adjusted_time, continent: continent_code, country: country_code)
+					newark_airport = Airport.find(1)
+					newark_airport.flights << flight1
 					begin
 						Airline.create(name: airline_name)
 					rescue

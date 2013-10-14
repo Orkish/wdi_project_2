@@ -5,5 +5,6 @@ class CreateAirlines < ActiveRecord::Migration
 
       t.timestamps
     end
+  add_index :airlines, :name, :unique => true
   end
 end
