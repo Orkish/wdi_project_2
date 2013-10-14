@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20131014152731) do
 
   create_table "airlines", :force => true do |t|
-    t.string   "name",       :null => false
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
