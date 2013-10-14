@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Flight do 
 	
 	before :each do 
-		@flights = Flight.new
+		@flight = Flight.new
 	end
 	
 	it "should have an id" do 
