@@ -9,7 +9,7 @@ describe Airline do
 		# describe "#flight" do 
 		# assert somecode 
 		# end 
-		# no assert + should be 
+		# no assert + .should be 
 	end
 	# it "" do 
 end

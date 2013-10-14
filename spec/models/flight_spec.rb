@@ -30,6 +30,7 @@ describe Flight do
 		assert @flight.airport_id
 	end 
 	
-		# no assert + should be 
-		# it "" do 
+
 end	
+
+#valid airport codes for ny: ewr, lga, jfk
