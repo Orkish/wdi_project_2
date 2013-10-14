@@ -2,19 +2,15 @@ require 'spec_helper'
 
 describe Airline do 
 	before :each do 
-		@airline = Airline.new
+		@airline = Airline.new(name: "US Airlines")
+		@flight = Flight.new(city: "Chicago", continent: "US", departure: "14:00", airport_id: "1")
+		@airport = Airport.new(name: "Newark")
+		@airline.airport << @airport
 	end
-	it "should return a list of associated flights" do 
-		@airline.flights.should be Array	 
-		# describe "#flight" do 
-		# assert somecode 
-		# end 
-		# no assert + .should be 
+
+	describe "#name" do
+		it "should return the correct airline name" do 
+			@airline.name.should eq("US Airlines")
+		end
 	end
-	# it "" do 
 end
-
-
-## these are the things being created in each airline object
-#		(id: integer, name: string, created_at: datetime, updated_at: datetime)
- 
