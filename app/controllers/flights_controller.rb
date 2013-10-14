@@ -21,10 +21,12 @@ class FlightsController < ApplicationController
 			end  #ends if number 1
 			table = page.css('table.tableListingTable')
 			data = table.search('tr')
+			binding.pry
 			max_rows = data.length - 1
 			(2..max_rows).each do |i|
 				time = data[i].children[8].children[0].text.gsub("\n","")
 				place = data[i].children[0].children[2].text.gsub(" ","").gsub(/(?<=[A-Za-z])(?=[A-Z])/, ' ')
+				airline_name = data[2].children[6].children.text
 				city_object = Geocoder.search(place)
 				sleep 0.5
 				if city_object.first == nil  #if number 2
@@ -37,6 +39,10 @@ class FlightsController < ApplicationController
 						if time && place	# if number 3
 							adjusted_time = Time.strptime(time, "%I:%M %P").strftime("%H:%M")
 							Flight.create(city: place, departure: adjusted_time, continent: continent_code, country: country_code)
+							begin
+								Airline.create(name: airline_name)
+							rescue
+							end
 							puts "putting #{i}th entry"
 						else
 							puts "wtf!!"
