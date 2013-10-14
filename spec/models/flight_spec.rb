@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Flight do 
-	
+	## see if any of these flights exist
 	before :each do 
 		@flight = Flight.new
 	end
@@ -32,5 +32,3 @@ describe Flight do
 	
 
 end	
-
-#valid airport codes for ny: ewr, lga, jfk
