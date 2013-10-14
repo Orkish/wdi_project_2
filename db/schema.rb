@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20131014152731) do
 
   create_table "airlines_airports", :id => false, :force => true do |t|
     t.integer  "airline_id"
-    t.integer  "aitport_id"
+    t.integer  "airport_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
