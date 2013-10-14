@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe Flight do 
+	
 	before :each do 
 		@flights = Flight.new
 	end
@@ -21,19 +22,14 @@ describe Flight do
 		assert @flight.continent
 	end
 	
-	it "should have a departure time"
+	it "should have a departure time" do
 		assert @flight.departure
 	end
 
-	it "should have an airport_id"
+	it "should have an airport_id" do
 		assert @flight.airport_id
 	end 
 	
-		# describe "#flight" do 
-		# assert somecode 
-		# created_at: nil, updated_at: nil, airport_id: nil> 
 		# no assert + should be 
 		# it "" do 
-end
-#test "a flight should have an airline"
-	
+end	
