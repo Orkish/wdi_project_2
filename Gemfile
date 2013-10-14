@@ -12,6 +12,10 @@ gem 'nokogiri'
 gem 'mechanize'
 gem 'ruby-continent'
 gem 'geocoder'
+#added rspec rails for :test and :development in gemfile.
+group :test, :development do 
+  gem "rspec-rails", "~> 2.4"
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
