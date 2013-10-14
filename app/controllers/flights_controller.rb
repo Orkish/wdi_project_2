@@ -39,7 +39,10 @@ class FlightsController < ApplicationController
 						if time && place	# if number 3
 							adjusted_time = Time.strptime(time, "%I:%M %P").strftime("%H:%M")
 							Flight.create(city: place, departure: adjusted_time, continent: continent_code, country: country_code)
-							Airline.create(name: airline_name)
+							begin
+								Airline.create(name: airline_name)
+							rescue
+							end
 							puts "putting #{i}th entry"
 						else
 							puts "wtf!!"

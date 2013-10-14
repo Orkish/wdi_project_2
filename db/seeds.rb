@@ -3,11 +3,12 @@ require 'continent'
 require 'geocoder'
 require 'time'
 require 'nokogiri'
+require 'open-uri'
 
 prev_date = Date.today.prev_day.to_s
 m = 0
-while m < 24 do
-# while m < 6 do # Test Loop
+# while m < 24 do
+while m < 6 do # Test Loop
 	page = Nokogiri::HTML(open("http://www.flightstats.com/go/FlightStatus/flightStatusByAirport.do?airport=EWR&airportQueryDate=#{prev_date}&airportQueryTime=#{m}&airlineToFilter=&airportQueryType=0&x=23&y=5"))
 	m += 1
 	if m == 1		#if number 1
@@ -16,8 +17,8 @@ while m < 24 do
 	table = page.css('table.tableListingTable')
 	data = table.search('tr')
 	max_rows = data.length - 1
-	(2..max_rows).each do |i|
-	# (2..3).each do |i| # TEST loop.
+	# (2..max_rows).each do |i|
+	(2..10).each do |i| # TEST loop.
 		time = data[i].children[8].children[0].text.gsub("\n","")
 		place = data[i].children[0].children[2].text.gsub(" ","").gsub(/(?<=[A-Za-z])(?=[A-Z])/, ' ')
 		airline_name = data[2].children[6].children.text
@@ -33,7 +34,10 @@ while m < 24 do
 				if time && place	# if number 3
 					adjusted_time = Time.strptime(time, "%I:%M %P").strftime("%H:%M")
 					Flight.create(city: place, departure: adjusted_time, continent: continent_code, country: country_code)
-					Airline.create(name: airline_name)
+					begin
+						Airline.create(name: airline_name)
+					rescue
+					end
 					puts "putting #{i}th entry"
 				else
 					puts "wtf!!"
