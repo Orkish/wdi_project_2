@@ -2,7 +2,16 @@ require 'spec_helper'
 
 describe Airline do 
 	before :each do 
+		@airline = Airline.new
 	end
+	it "should return a list of associated flights" do 
+		@airline.flights.should be Array	 
+		# describe "#flight" do 
+		# assert somecode 
+		# end 
+		# no assert + should be 
+	end
+	# it "" do 
 end
 
 
