@@ -1,4 +1,4 @@
 require 'spec_helper'
 
-test "a flight should have an airline"
+#test "a flight should have an airline"
 	
