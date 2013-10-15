@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131014204615) do
+ActiveRecord::Schema.define(:version => 20131015183707) do
 
   create_table "airlines", :force => true do |t|
     t.string   "name"
@@ -34,13 +34,13 @@ ActiveRecord::Schema.define(:version => 20131014204615) do
 
   create_table "flights", :force => true do |t|
     t.string   "city"
-    t.string   "country",    :default => "no country"
-    t.string   "continent",  :default => "no continent"
-    t.time     "departure"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
+    t.string   "country",        :default => "no country"
+    t.string   "continent",      :default => "no continent"
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
     t.integer  "airport_id"
     t.integer  "airline_id"
+    t.integer  "departure_time"
   end
 
 end
