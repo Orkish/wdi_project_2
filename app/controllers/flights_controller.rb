@@ -23,7 +23,17 @@ class FlightsController < ApplicationController
 	end
 
 	def test2
-		Flight.where(:departure_time => start.time..end.time)	
+		time_segment = []
+		start_time = 0
+		end_time = -15
+		while end_time < 600
+			start_time = end_time + 15
+			end_time = start_time + 15
+			if start_time % 60 == 0 && != 120 && 			
+				flight = Flight.where(:departure_time => start_time..end_time)
+
+
+			time_segment << flight 
 	end
 
 	# def test
