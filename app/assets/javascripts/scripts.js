@@ -27,3 +27,39 @@ $(function(){
   })
 
 });
+//////////////// side nav legend //////////////////
+
+$(document).ready(function(){
+  $('#side-legend').hover(function(){
+    animateLegendIn();
+  }, function(){
+    animateLegendOut();
+  });
+});
+
+function animateLegendIn(){
+  $side_legend = $('#side-legend');
+  $side_legend.stop().animate({left: '0px', opacity: .9}, 1000, function(){
+    $side_legend.addClass('active');
+  });
+};
+
+function animateLegendOut(){
+  $side_legend = $('#side-legend');
+  $side_legend.stop().animate({left: '-90px', opacity: .5}, 1000)
+  $side_legend.removeClass('active');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
