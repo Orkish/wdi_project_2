@@ -15,12 +15,17 @@ class FlightsController < ApplicationController
 		flight_city = flight.city
 		flight_continent = flight.continent
 		flight_country = flight.country
-		flight_departure = flight.departure
+		flight_departure = flight.departure_time
 		respond_to do |format|
 			format.html
-			format.json {render :json => {city: flight_city, continent: flight_continent, country: flight_country, departure: flight_departure}.to_json}
+			format.json {render :json => {city: flight_city, continent: flight_continent, country: flight_country, departure_time: flight_departure}.to_json}
 		end
 	end
+
+	def test2
+		Flight.where(:departure_time => start.time..end.time)	
+	end
+
 	# def test
 	# 	prev_date = Date.today.prev_day.to_s
 	# 	m = 0

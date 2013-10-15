@@ -21,7 +21,7 @@ $(function(){
   		$('#response-one').append("<li>" + data.city + "</li>");
   		$('#response-one').append("<li>" + data.country + "</li>");
   		$('#response-one').append("<li>" + data.continent + "</li>");
-  		$('#response-one').append("<li>" + data.departure + "</li>");
+  		$('#response-one').append("<li>" + data.departure_time + "</li>");
   	})
 
   })
