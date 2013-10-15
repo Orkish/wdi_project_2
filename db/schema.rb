@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131015183707) do
+ActiveRecord::Schema.define(:version => 20131015202131) do
 
   create_table "airlines", :force => true do |t|
     t.string   "name"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(:version => 20131015183707) do
     t.datetime "updated_at",                                 :null => false
     t.integer  "airport_id"
     t.integer  "airline_id"
-    t.integer  "departure_time"
+    t.time     "departure_time"
   end
 
 end

@@ -7,7 +7,10 @@ load index start animation
 
 var data = {
   flight_0: [],
-  flight_1: [],
+  flight_1: {
+    q1: [],
+    q2: []
+  },
   flight_2: [],
   flight_3: [],
   flight_4: [],

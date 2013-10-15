@@ -5,6 +5,6 @@ def up
 end
  
 def down
-  remove_column :flights, :departure
+  remove_column :flights, :departure_time
 end
 end
