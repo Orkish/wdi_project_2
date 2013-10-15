@@ -4,7 +4,7 @@ Flight.delete_all
 Airline.delete_all
 
 
-flight1 = Flight.create(city: "Saint Louis", continent: "NA", country: "US", departure: "00:00")
+flight1 = Flight.create(city: "Saint Louis", continent: "NA", country: "US", departure_time: "00:00")
 airport1 = Airport.create(name: "EWR")
 airline1 = Airline.create(name: "United")
 
