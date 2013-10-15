@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Airport do
   before :each do
     @airport = Airport.new(name: "EWR")
-    @flight = Flight.new(city: "Saint Louis", country: "US", continent: "NA", departure: "2000-01-01 00:00:00", airport_id: "1")
+    @flight = Flight.new(city: "Saint Louis", country: "US", continent: "NA", departure_time: "2000-01-01 00:00:00", airport_id: "1")
   end
 
   describe "#name" do
