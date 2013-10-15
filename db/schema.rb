@@ -14,10 +14,12 @@
 ActiveRecord::Schema.define(:version => 20131015202131) do
 
   create_table "airlines", :force => true do |t|
-    t.string   "name",       :null => false
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "airlines", ["name"], :name => "index_airlines_on_name", :unique => true
 
   create_table "airlines_airports", :id => false, :force => true do |t|
     t.integer "airline_id"
