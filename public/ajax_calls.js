@@ -6,6 +6,20 @@ load index start animation
 
 
 var data = {
+<<<<<<< HEAD
+  0: [{}]
+  1: [{}]
+  2: [{}]
+  3: [{}]
+  4: [{}]
+  5:
+  6:
+  7:
+  8:
+  9:
+  10:
+  ......
+=======
   flight_0: [],
   flight_1: {
     q1: [],
@@ -34,6 +48,7 @@ var data = {
   flight_22: [],
   flight_23: [],
   flight_24: [],
+>>>>>>> 8646b80ce1fa495183add839892ea425a7679f31
 }
 
 var index = 0;
