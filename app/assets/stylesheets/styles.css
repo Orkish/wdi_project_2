@@ -1,3 +1,4 @@
+/************ map **************/
 body {
   margin: 0;
 }
@@ -13,3 +14,9 @@ path {
 .minor_road { stroke: #ccb; }
 .highway { stroke: #f39; stroke-width: 1.5px; }
 .rail { stroke: #7de; }
+/************ map **************/
+
+
+.map {
+  width: 100%;
+}
