@@ -15,7 +15,7 @@ class FlightsController < ApplicationController
 		time_segment = []
 		start_time = Time.new(2000, 1, 1, 0, 0, 0).utc - 5.hours # start_time is 00:00
 		end_time = Time.new(2000, 1, 1, 0, 0, 0).utc - 5.hours + 15.minutes # end_time is -23:45
-		while end_time <= Time.new(2000, 1, 2, 0, 0, 0).utc - 5.hours
+		# while end_time <= Time.new(2000, 1, 2, 0, 0, 0).utc - 5.hours
 			flights = Flight.where(:departure_time => start_time...end_time)
 			start_time += 15.minutes
 			end_time += 15.minutes	
@@ -28,13 +28,9 @@ class FlightsController < ApplicationController
 				format.json {render :json => {flights: flights}}
 			end
 		
-		end
+		# end
 		
 	end
-
-	def test2
-
-
 	# def test
 	# 	prev_date = Date.today.prev_day.to_s
 	# 	m = 0
