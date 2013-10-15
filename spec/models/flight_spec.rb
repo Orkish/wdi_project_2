@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Flight do 
 	## see if any of these flights exist
 	before :each do 
-		@flight = Flight.new(city: "Saint Louis", country: "US", continent: "NA", departure: "000-01-01 00:00:00")
+		@flight = Flight.new(city: "Saint Louis", country: "US", continent: "NA", departure_time: "000-01-01 00:00:00")
 		@airline = Airline.new(name: "United")
 		@airport = Airport.new(name: "EWR")
 	end
@@ -21,7 +21,7 @@ describe Flight do
 	end
 	
 	it "should have a departure time" do
-		assert @flight.departure
+		assert @flight.departure_time
 	end
 
 	it "should belong to an airline" do
