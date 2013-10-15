@@ -11,37 +11,30 @@ class FlightsController < ApplicationController
 	end
 
 	def test
-		flight = Flight.first
-		flight_city = flight.city
-		flight_continent = flight.continent
-		flight_country = flight.country
-		flight_departure = flight.departure_time
-		respond_to do |format|
-			format.html
-			format.json {render :json => {city: flight_city, continent: flight_continent, country: flight_country, departure_time: flight_departure}.to_json}
-		end
-	end
-
-	def test2
-
-		# length = 97
-		# time_segment = []
-		# start_time = 0.hours
-		# end_time = 24.hours
-		# increment = 15.minutes
-		# all_times = (1 + (end_time - start_time)/increment) do |i|
-		# 	(Time.now.midnight + (i*increment) + start_time).strftime("%H:%M")
-		# end
+		
 		time_segment = []
 		start_time = Time.new(2000, 1, 1, 0, 0, 0).utc - 5.hours # start_time is 00:00
 		end_time = Time.new(2000, 1, 1, 0, 0, 0).utc - 5.hours + 15.minutes # end_time is -23:45
 		while end_time <= Time.new(2000, 1, 2, 0, 0, 0).utc - 5.hours
-			flight = Flight.where(:departure_time => start_time...end_time)
+			flights = Flight.where(:departure_time => start_time...end_time)
 			start_time += 15.minutes
-			end_time += 15.minutes
-			time_segment << flight
+			end_time += 15.minutes	
+			# time_segment = 		
+			# flights.each do |flight|
+			# 	flight_segment = []
+			# 	flight_segment << [[flight.continent, flight.departure]]							
+			respond_to do |format|
+				format.html
+				format.json {render :json => {flights: flights}}
+			end
+		
 		end
+		
 	end
+
+	def test2
+
+
 	# def test
 	# 	prev_date = Date.today.prev_day.to_s
 	# 	m = 0
