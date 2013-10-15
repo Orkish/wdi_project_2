@@ -9,12 +9,12 @@ airport1 = Airport.create(name: "EWR")
 airline1 = Airline.create(name: "United")
 
 airport1.flights << flight1
-airline1.airports << airport1
+airline1.flights << flight1
 
 
 
 
 # As a user, I would like to find out all the flights of an airline.
 
-# As a user, If I select an airport, I would like to find out all the flights and their associated airline
+# As a user, If I select an airport, I would like to find out all the flights associated.
 
