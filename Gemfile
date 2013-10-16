@@ -12,7 +12,7 @@ gem 'nokogiri'
 gem 'mechanize'
 gem 'ruby-continent'
 gem 'geocoder'
-
+gem 'devise'
 #####################TESTING ################################
 #added rspec rails for :test and :development in gemfile.
 group :test, :development do 
