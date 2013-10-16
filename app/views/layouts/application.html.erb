@@ -5,19 +5,14 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <div id="administrator_nav">
-  <% if administrator_signed_in? %>
-    Signed in as <%= current_administrator.email %>. Not you?
-    <%= link_to "Sign out", destroy_administrator_session_path, :method => :delete %>
-  <% else %>
-    <%= link_to "Sign up", new_administrator_registration_path %> or <%= link_to "sign in", new_administrator_session_path %>
-  <% end %>
-</div>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script src="http://d3js.org/d3.geo.tile.v0.min.js"></script>
 </head>
+<<<<<<< HEAD
+=======
+
+<div class="blackbg whitebg">
+>>>>>>> 5de0a60fb16a75d504b95afa2555effd8975580e
 <body>
  <ul class="nav nav-pills navbar-fixed-top">
   <li class="active">
@@ -25,8 +20,20 @@
   </li>
   <li><a href="#">About Us</a></li>
   <li><a href="#">Something Else?</a></li>
+  <li id="administrator_nav">
+    <% if administrator_signed_in? %>
+        Signed in as <%= current_administrator.email %>. Not you?
+      <%= link_to "Sign Out", destroy_administrator_session_path, :method => :delete %>
+    <% else %>
+      <%= link_to "Sign Up", new_administrator_registration_path %>
+  </li>
+  <li>
+    <%= link_to "Sign In", new_administrator_session_path %>
+  </li>
+    <% end %>
+<!--   <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p></li> -->
 </ul>
-<hr>
 
  <!--  <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
