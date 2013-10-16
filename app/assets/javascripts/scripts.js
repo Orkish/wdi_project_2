@@ -1,3 +1,6 @@
+var counter = 0;
+var newark_data = {};
+
 $(function(){
   $("h1").hide();
   setTimeout(function(){
@@ -11,8 +14,8 @@ $(function(){
 
 
   $("#ajax-one").on("click", function(){
-  	var counter = 0;
-      setInterval(function(){ 
+  	counter = 0;
+      var timer = setInterval(function(){ 
         $.ajax({
           url: '/flights/' + counter,
           method: "GET",
@@ -21,7 +24,11 @@ $(function(){
         .done(function(data){
           console.log(data);
           console.log(counter);
+          newark_data["t" + counter] = data; 
           counter++;
+          if (counter == 97) {
+            clearInterval(timer);
+          }
         });
       }, 600)
   })
