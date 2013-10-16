@@ -15,7 +15,14 @@ path {
 .highway { stroke: #f39; stroke-width: 1.5px; }
 .rail { stroke: #7de; }
 /************ map **************/
+/*
+.blackbg {
+  background-color: black;
+}*/
 
+.whitebg {
+  background-color: white;
+}
 
 .map {
   width: 100%;
@@ -31,7 +38,7 @@ ul {
 .side-legend {
   background-color: #34495e;
   bottom: 500px;
-  border-radius: 10px;
+  border-radius: 7px;
   height: 50px;
   left: -90px;
   position: fixed;
