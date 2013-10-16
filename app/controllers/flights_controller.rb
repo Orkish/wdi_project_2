@@ -12,20 +12,26 @@ class FlightsController < ApplicationController
 
 	def test
 		
+			# [["AS", "NA", "EU", "SA"],[],[],[]]
+
+		counter = params[:counter].to_i
 		time_segment = []
-		start_time = Time.new(2000, 1, 1, 0, 0, 0).utc - 5.hours # start_time is 00:00
-		end_time = Time.new(2000, 1, 1, 0, 0, 0).utc - 5.hours + 15.minutes # end_time is -23:45
+		# start_time = counter * 15.minutes
+		# end_time = (counter + 1) * 15.minutes
+		start_time = (Time.new(2000, 1, 1, 0, 0, 0).utc - 5.hours) + counter * 15.minutes # start_time is 00:00
+		end_time = (Time.new(2000, 1, 1, 0, 0, 0).utc - 5.hours + 15.minutes) + counter * 15.minutes # end_time is -23:45
 		# while end_time <= Time.new(2000, 1, 2, 0, 0, 0).utc - 5.hours
-			flights = Flight.where(:departure_time => start_time...end_time)
-			start_time += 15.minutes
-			end_time += 15.minutes	
-			# time_segment = 		
-			# flights.each do |flight|
-			# 	flight_segment = []
-			# 	flight_segment << [[flight.continent, flight.departure]]							
+		flights = Flight.where(:departure_time => start_time...end_time)
+			# start_time += 15.minutes
+			# end_time += 15.minutes	
+			flight_array = []
+			flights.each do |flight|
+				flight_array << flight.continent
+			end
+									
 			respond_to do |format|
 				format.html
-				format.json {render :json => {flights: flights}}
+				format.json {render :json => {flights: flight_array}}
 			end
 		
 		# end

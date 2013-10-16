@@ -20,8 +20,10 @@ $(function(){
         })
         .done(function(data){
           console.log(data);
+          console.log(counter);
+          counter++;
         });
-      }, 3000)
+      }, 600)
   })
 });
 //////////////// side nav legend //////////////////
