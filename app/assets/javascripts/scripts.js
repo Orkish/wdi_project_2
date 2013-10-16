@@ -1,3 +1,6 @@
+var counter = 0;
+var newark_data = {};
+
 $(function(){
   $("h1").hide();
   setTimeout(function(){
@@ -11,21 +14,24 @@ $(function(){
 
 
   $("#ajax-one").on("click", function(){
-  	$.ajax({
-  		url: '/flights',
-  		method: 'GET',
-  		dataType: 'json'
-  	})
-  	.done(function(data) {
-  		console.log(data);
-  		$('#response-one').append("<li>" + data.city + "</li>");
-  		$('#response-one').append("<li>" + data.country + "</li>");
-  		$('#response-one').append("<li>" + data.continent + "</li>");
-  		$('#response-one').append("<li>" + data.departure_time + "</li>");
-  	})
-
+  	counter = 0;
+      var timer = setInterval(function(){ 
+        $.ajax({
+          url: '/flights/' + counter,
+          method: "GET",
+          dataType: "json"
+        })
+        .done(function(data){
+          console.log(data);
+          console.log(counter);
+          newark_data["t" + counter] = data; 
+          counter++;
+          if (counter == 97) {
+            clearInterval(timer);
+          }
+        });
+      }, 600)
   })
-
 });
 //////////////// side nav legend //////////////////
 
