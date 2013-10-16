@@ -5,12 +5,12 @@ $(function(){
   $("h1").hide();
   setTimeout(function(){
   	$("h1").fadeIn("slow");
-  }, 1500);
+  }, 500);
 
   $("body").hide();
   setTimeout(function(){
   	$("body").fadeIn(2000);
-  }, 1500);
+  }, 500);
 
 
   $("#ajax-one").on("click", function(){
@@ -45,7 +45,7 @@ $(document).ready(function(){
 
 function animateLegendIn(){
   $side_legend = $('#side-legend');
-  $side_legend.stop().animate({left: '0px', opacity: .9}, 1000, function(){
+  $side_legend.stop().animate({left: '0px', opacity: .7}, 1000, function(){
     $side_legend.addClass('active');
   });
 };
@@ -54,16 +54,32 @@ function animateLegendOut(){
   $side_legend = $('#side-legend');
   $side_legend.stop().animate({left: '-90px', opacity: .5}, 1000)
   $side_legend.removeClass('active');
-}
+};
 
 ////////////// Background Trans ////////////////////
 
+$(function() {
+    setTimeout(function(){
+      $('.transition').addClass('animate_white')
+    }, 7000)
+    setTimeout(function(){
+      $('.transition').addClass('animate_black')
+    }, 20000)
+});
+
+//////////////// Play/Stop Button /////////////////
 
 
 
-
-
-
+// function button(){
+//   $('#button').val(){
+//     if(onoff == false){
+//       $('#button').off();
+//     } else{
+//       $('#button').on();
+//     }
+//   }
+// }
 
 
 

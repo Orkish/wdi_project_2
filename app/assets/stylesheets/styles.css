@@ -1,3 +1,33 @@
+/************ splash *************/
+body {
+  background-image: url("load_clouds.jpg");
+  height: 100%;
+  width: 100%;
+}
+
+#splash {
+  margin-top: 10%;
+  font-size: 10em;
+}
+
+
+/************ body *************/
+.title {
+  padding-left: 5px;
+}
+
+.body-title {
+  margin: 10px;
+  padding-left: 10px;
+}
+
+.body-text {
+  border: 1px solid;
+  border-radius: 10px;
+  padding-left: 10px;
+  margin: 10px;
+}
+
 /************ map **************/
 body {
   margin: 0;
@@ -10,35 +40,63 @@ path {
   stroke-linecap: round;
 }
 
-.major_road { stroke: #776; }
-.minor_road { stroke: #ccb; }
-.highway { stroke: #f39; stroke-width: 1.5px; }
-.rail { stroke: #7de; }
 /************ map **************/
-/*
-.blackbg {
-  background-color: black;
+
+div.transition {
+    background-color: #34495e;
+    transition: background-color 10s linear;
+    -moz-transition: background-color 10s linear;
+    -o-transition: background-color 10s linear;
+    -webkit-transition: background-color 10s linear;
+}
+
+div.animate_white {
+    background-color: #ffffff;
+}
+
+div.animate_black {
+    background-color: #34495e;
+}
+
+/********* road colors ************/
+
+/*path {
+  fill: none;
+  stroke: red;
+  stroke-linejoin: round;
+  stroke-linecap: round;
 }*/
 
-.whitebg {
-  background-color: white;
+.major_road { 
+  stroke: #776; 
 }
+.minor_road { 
+  stroke: #776; 
+}
+.highway { 
+  stroke: #f39; stroke-width: 1.8px; 
+}
+.rail { 
+  stroke: red; 
+}
+/*********************************/
 
 .map {
   width: 100%;
   z-index: -1;
 }
 
-/*********** bootstrap **********/
+/*********** bootstrap top nav **********/
 ul {
-  background-color: #34495e;
+  background-color: #7f8c8d;
+  padding: 5px 0px 5px 15px;
 }
 
 /*********** side nav legend **********/
 .side-legend {
-  background-color: #34495e;
+  background-color: #fff;
   bottom: 300px;
-  border-radius: 7px;
+  border-radius: 0px 7px 7px 0px;
   height: 50px;
   left: -90px;
   position: fixed;
