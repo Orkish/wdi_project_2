@@ -17,8 +17,9 @@
   <li><a href="#">Something Else?</a></li>
   <li id="administrator_nav">
     <% if administrator_signed_in? %>
-        Signed in as <%= current_administrator.email %>. Not you?
+  <li>
       <%= link_to "Sign Out", destroy_administrator_session_path, :method => :delete %>
+  </li>
     <% else %>
       <%= link_to "Sign Up", new_administrator_registration_path %>
   </li>
