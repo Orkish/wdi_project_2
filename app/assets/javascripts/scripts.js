@@ -56,6 +56,8 @@ function animateLegendOut(){
   $side_legend.removeClass('active');
 }
 
+////////////// Background Trans ////////////////////
+
 
 
 
