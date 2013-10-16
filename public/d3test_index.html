@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lines using D3.js</title>
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+</head> 
+<body>   
+    <div id="D3line"> </div>
+    <script type="text/javascript">
+/*Select the DIV container "D3line" and add an SVG element to it*/
+        var h = 1000;
+        var w = 1000; 
+
+        var lineGraph = d3.select("#D3line")
+            .append("svg")
+            .attr("width", h)   
+            .attr("height", w); 
+
+
+        // To draw a line use the "svg:line" element.
+        // "svg:line" element requires 4 attributes (x1, y1, x2, and y2)
+        // (x1,y1) are coordinates of the starting point. 
+        // (x2,y2) are coordinates of the end point.
+        // You also need to specify the stroke color.
+
+        // d3.select("body").transition().style("color", "red");
+
+        var dataset = [ 5, 10, 15, 20, 25 ];
+        // and then use data() to iterate through each data point, creating a circle for each one:
+        // lineGraph.selectAll("circle")
+        // .data(dataset)
+        // .enter()
+        // .append("circle");
+        //
+
+      
+        var myLine = lineGraph.append("svg:line")
+            .attr("x1", w/10)
+            .attr("y1", 50)
+            .transition() 
+            .duration(1000)
+            .attr("x2", Math.floor((Math.random()*500)+500))
+            .attr("y2", 350)
+            .style("stroke", "rgb(155, 89, 182)")
+            .ease("elastic", 10, .3);
+    
+
+    
+       // this is 0.1s
+
+        var myLine = lineGraph.append("svg:line")
+            .attr("x1", 500)
+            .attr("y1", 10)
+            .transition() 
+            .duration(1500)
+            .attr("x2", -(Math.floor((Math.random()*1000)+500)))
+            .attr("y2", (Math.floor((Math.random()*1000)+500)))
+            .style("stroke", "rgb(52, 152, 219)");
+
+
+    </script>
+</body>
+</html>
