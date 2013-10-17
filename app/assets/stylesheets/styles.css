@@ -67,6 +67,8 @@
   width: 100%;
 }
 
+
+
 /************ map **************/
 body {
     font-family: 'Lato', sans-serif;
@@ -135,11 +137,12 @@ div.animate_black {
 }
 
 #map-div {
-  z-index:4;
+  z-index: 3;
 }
 
-#flightpaths {
+#flight-paths {
   z-index: 5;
+  position: absolute;
 }
 
 /*********** bootstrap top nav **********/

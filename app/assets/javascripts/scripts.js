@@ -1,4 +1,4 @@
-var stuff; //IMPORTANT!!!!
+var fligth_data; //IMPORTANT!!!!
 var timer;
 
 //--------------------
@@ -116,19 +116,19 @@ $(function() {
 //   }
 // }
 //////////////// D3 stuff ///////////////////////
-function dataSwitch() {
-  clearInterval(timer)
-  var t = 0
-  timer = setInterval(function(){
-    console.log(t);
-    console.log(stuff[t]);
-    t++;
-    if (t == 97) {
-      clearInterval(timer)
-    }
-  },625)
+// function dataSwitch() {
+//   clearInterval(timer)
+//   var t = 0
+//   timer = setInterval(function(){
+//     console.log(t);
+//     console.log(stuff[t]);
+//     t++;
+//     if (t == 97) {
+//       clearInterval(timer)
+//     }
+//   },625)
 
-}
+// }
 
 //////////////// Parallax /////////////////
 
@@ -141,6 +141,8 @@ $(document).ready(function() {
     $('.bg').css('top', -(scrolled * 0.15) + 'px');
   }
 });
+
+
 
 
 

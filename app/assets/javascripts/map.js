@@ -7,7 +7,7 @@ $(document).ready(function(){
 
   var projection = d3.geo.mercator()
       .center([-74.0064, 40.7142])
-      .scale((1 << 21) / 2 / Math.PI)
+      .scale((1 << 21) / 9 / Math.PI)
       .translate([width / 2, height / 2]);
 
   var path = d3.geo.path()
