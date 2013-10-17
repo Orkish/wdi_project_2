@@ -3,9 +3,7 @@ class FlightsController < ApplicationController
 	require 'open-uri'
 	require 'time'
 	require 'continent'
-	require 'mechanize'
 	
-
 	def index
 		@flights = Flight.all		
 	end

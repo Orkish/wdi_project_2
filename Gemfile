@@ -9,7 +9,6 @@ gem 'pg'
 gem 'pry'
 gem 'httparty'
 gem 'nokogiri'
-gem 'mechanize'
 gem 'ruby-continent'
 gem 'geocoder'
 gem 'devise'
@@ -38,6 +37,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'newrelic_rpm'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

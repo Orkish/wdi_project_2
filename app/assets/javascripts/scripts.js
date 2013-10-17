@@ -8,6 +8,13 @@ var timer_jfk;
 var $airport_selector;
 
 //--------------------
+
+var svg = d3.select("#flight-paths")
+    .append("svg")
+    .attr("id", "routes")
+    .attr("width", 550)
+    .attr("height", 1200);
+
 var counter = 0;
 var newark_data = {};
 

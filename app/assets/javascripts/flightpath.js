@@ -1,10 +1,17 @@
+var svg = d3.select("#flight-paths")
+    .append("svg")
+    .attr("id", "routes")
+    .attr("width", 1200)
+    .attr("height", 550);
+
+
 function dataSwitch() {
   clearInterval(timer);
   var t = 0;
   timer = setInterval(function() {
         d3.select("#routes").remove();
-        var h = 500;
-        var w = 1000;
+        var h = 550;
+        var w = 1200;
         var startx = w/2;
         var starty = h/2;
         var dataset = flight_data[t];
@@ -33,6 +40,7 @@ function dataSwitch() {
                 .attr("x2", startx)
                 .attr("y2", starty)
                 .style("stroke-width", 2)
+                .style("opacity", 0.5)
                 .style("stroke", function(d) {
                     if (d == 1) {
                         return "rgb(52, 152, 219)";
