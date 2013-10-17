@@ -7,5 +7,6 @@ ProjectTwo::Application.routes.draw do
   get '/test2', to: "flights#test2"
   get '/desperation', to: "flights#desperation"
   get '/data', to: "flights#data"
+  get '/administrators/sign_out', to: "flights#administrators/sign_out"
   # match '*path' => redirect('/') #  unless Rails.env.development?
 end

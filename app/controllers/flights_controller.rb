@@ -13,6 +13,11 @@ class FlightsController < ApplicationController
 		@flights = Flight.all		
 	end
 
+	def sign_out
+		redirect_to '/data'
+	end
+
+
 	def test
 		
 			# [["AS", "NA", "EU", "SA"],[],[],[]]
