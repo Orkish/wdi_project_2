@@ -14,7 +14,7 @@ $(function(){
   $("body").hide();
   setTimeout(function(){
   	$("body").fadeIn(2000);
-  }, 500);
+  }, 200);
 
 
   $("#ajax-one").on("click", function(){
@@ -115,7 +115,6 @@ $(function() {
 //     }
 //   }
 // }
-
 //////////////// D3 stuff ///////////////////////
 function dataSwitch() {
   clearInterval(timer)
@@ -131,6 +130,17 @@ function dataSwitch() {
 
 }
 
+//////////////// Parallax /////////////////
+
+$(document).ready(function() {
+  $(window).scroll(function(e){
+    parallax();
+  });
+  function parallax() {
+    var scrolled = $(window).scrollTop();
+    $('.bg').css('top', -(scrolled * 0.15) + 'px');
+  }
+});
 
 
 
