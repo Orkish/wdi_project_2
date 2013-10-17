@@ -1,7 +1,7 @@
 ////////// All Global Vars///////
 
 var stuff; //IMPORTANT!!!!
-var fligth_data; //IMPORTANT!!!!
+var flight_data; //IMPORTANT!!!!
 var timer;
 var $airport_selector;
 
@@ -53,7 +53,7 @@ $(function(){
   })
 
   d3.json("/flights.json",function(data) {
-    stuff = data;
+    flight_data = data;
   })
 
 
