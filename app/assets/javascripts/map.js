@@ -1,6 +1,6 @@
 $(document).ready(function(){
-  var width = Math.max(960, window.innerWidth),
-      height = Math.max(500, window.innerHeight);
+  var width = 1200,
+      height = 550;
 
   var tiler = d3.geo.tile()
       .size([width, height]);
