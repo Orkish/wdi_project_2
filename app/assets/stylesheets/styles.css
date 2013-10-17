@@ -98,14 +98,14 @@ path {
 
 div.transition {
     background-color: #2c3e50;
-    transition: background-color 10s linear;
-    -moz-transition: background-color 10s linear;
-    -o-transition: background-color 10s linear;
-    -webkit-transition: background-color 10s linear;
+    transition: background-color 5s linear;
+    -moz-transition: background-color 5s linear;
+    -o-transition: background-color 5s linear;
+    -webkit-transition: background-color 5s linear;
 }
 
 div.animate_white {
-    background-color: #ffffff;
+    background-color: rgba(236, 240, 241,1.0);
 }
 
 div.animate_black {
