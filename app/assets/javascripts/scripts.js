@@ -2,7 +2,9 @@
 // var svg;
 var stuff; //IMPORTANT!!!!
 var flight_data; //IMPORTANT!!!!
+var flight_data_jfk;
 var timer;
+var timer_jfk;
 var $airport_selector;
 
 //--------------------
@@ -56,6 +58,9 @@ $(function(){
     flight_data = data;
   })
 
+  d3.json("/flights_jfk.json",function(jfk) {
+    flight_data_jfk = jfk;
+  })
 
 
   // $("#ajax-two").on("click", function(){

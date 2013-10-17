@@ -66,7 +66,7 @@ class FlightsController < ApplicationController
 		redirect_to '/flights/1'
 	end
 
-	def desperation
+	def ewrjson
 		counter = 0
 		n = 0
 		obj = {}
@@ -115,6 +115,57 @@ class FlightsController < ApplicationController
 		end
 		redirect_to "/flights/1"
 	end
+
+	def jfkjson
+		jfk = Airport.where(name: "JFK")[0]
+		jfk_flights = jfk.flights
+		counter = 0
+		n = 0
+		obj = {}
+		final_array = [] # 24-hour array
+		# flight_hash = {}
+		while counter < 97
+			start_time = (Time.new(2000, 1, 1, 0, 0, 0).utc - 5.hours) + counter * 15.minutes # start_time is 00:00
+			end_time = (Time.new(2000, 1, 1, 0, 0, 0).utc - 5.hours + 15.minutes) + counter * 15.minutes # end_time is -23:45
+			flights = jfk_flights.where(:departure_time => start_time...end_time) # Flight.where(:departure_time => start_time...end_time)
+			flight_array = [] # 15-minute array
+			flights.each do |flight|
+				case flight.continent
+				when "NA"
+					value = 1
+				when "EU"
+					value = 2
+				when "AS"
+					value = 3
+				when "AF"
+					value = 4
+				when "SA"
+					value = 5
+				else
+					value = 1
+				end
+				flight_array << value
+				puts flight
+			end
+			counter += 1
+			final_array << flight_array
+		end
+		while n < 97 do
+			obj[:"#{n}"] = final_array[n]
+			n += 1
+		end
+		json = obj.to_json
+		file = "flights_jfk.json"
+		File.open(file, "w+") do |stuff| # w+ reads and writes
+			stuff << json
+		end
+		redirect_to "/flights/1"
+	end
+
+
+
+
+
 
 
 end # ends class
