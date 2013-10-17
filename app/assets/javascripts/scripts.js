@@ -1,5 +1,5 @@
 ////////// All Global Vars///////
-
+// var svg;
 var stuff; //IMPORTANT!!!!
 var flight_data; //IMPORTANT!!!!
 var timer;
@@ -120,6 +120,16 @@ $(function() {
 //   }
 // }
 //////////////// D3 stuff ///////////////////////
+// $(function(){
+//   svg = d3.select("#flights-path")
+//     .append("svg")
+//     .attr("width", 500)
+//     .attr("height", 1000);
+// })
+
+
+
+
 // function dataSwitch() {
 //   clearInterval(timer)
 //   var t = 0

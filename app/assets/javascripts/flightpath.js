@@ -1,19 +1,20 @@
 function dataSwitch() {
   clearInterval(timer);
   var t = 0;
-  timer = setInterval(function flightPaths () {
+  timer = setInterval(function() {
 
         var h = 500;
         var w = 1000;
         var startx = w/2;
         var starty = h/2;
-        var dataset = flight_data;
+        var dataset = flight_data[30];
+        console.log(flight_data[30]);
 
         function getRandomInt (min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
         }
 
-            var svg = d3.select("#flight-paths")
+            var svg = d3.select("#map-div")
                 .append("svg")
                 .attr("width", w)
                 .attr("height", h);
@@ -78,13 +79,14 @@ function dataSwitch() {
                             } else {
                                 return console.log("fail");
                                 }
-                            })
-                        .each("end", function() {
-                            d3.select(this)
-                              .transition()
-                                    .duration(500)
-                                    .attr("opacity", 0);
-                                    });
+                            });
+                        // .each("end", function() {
+                        //     d3.select(this)
+                        //       .transition()
+                        //       .duration(500)
+                        //       .attr("opacity", 0);
+                        //     });
+                        
     t++;
     if (t == 97) {
       clearInterval(timer);
