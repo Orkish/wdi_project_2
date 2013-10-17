@@ -155,6 +155,11 @@ div.animate_black {
   position: absolute;
 }
 
+#routes {
+  z-index: 999;
+  position: absolute;
+}
+
 /*********** bootstrap top nav **********/
 ul {
   /*background-color: #ecf0f1;*/

@@ -2,20 +2,21 @@ function dataSwitch() {
   clearInterval(timer);
   var t = 0;
   timer = setInterval(function() {
-
+        d3.select("#routes").remove();
         var h = 500;
         var w = 1000;
         var startx = w/2;
         var starty = h/2;
-        var dataset = flight_data[30];
-        console.log(flight_data[30]);
+        var dataset = flight_data[t];
+        console.log(flight_data[t]);
 
         function getRandomInt (min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
         }
 
-            var svg = d3.select("#map-div")
+            var svg = d3.select("#flight-paths")
                 .append("svg")
+                .attr("id", "routes")
                 .attr("width", w)
                 .attr("height", h);
 
