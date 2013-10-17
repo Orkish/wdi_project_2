@@ -1,8 +1,12 @@
 /************ splash *************/
-body {
-  background-image: url("load_clouds.jpg");
-  height: 100%;
+.bg {
+  background: url("load_clouds.jpg");
+  position: fixed;
+  height: 1100px;
   width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 #splash {
@@ -12,20 +16,48 @@ body {
 
 
 /************ body *************/
+
+.pause-button {
+  margin-bottom: 5px;
+}
+
+.restart-button {
+  margin-top: 5px;
+}
+
+.button-div {
+  /*border: 1px solid black;*/
+  width: 350px;
+  float: left;
+  margin-left: 25px;
+  margin-top: 55px;
+}
+
+.bullet-div {
+  float: left;
+}
+
 .title {
   padding-left: 5px;
 }
 
 .body-title {
-  margin: 10px;
+  margin-left: 500px;
   padding-left: 10px;
 }
 
 .body-text {
-  border: 1px solid;
+  /*border: 1px solid;*/
   border-radius: 10px;
-  padding-left: 10px;
-  margin: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 500px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+.wrapper-div {
+  width: 100%;
 }
 
 /************ map **************/
@@ -82,22 +114,23 @@ div.animate_black {
 /*********************************/
 
 .map {
-  width: 100%;
+  margin: 0px 10px 0px 10px;
+  /*width: 100%;*/
   z-index: -1;
 }
 
 /*********** bootstrap top nav **********/
 ul {
-  
+  background-color: #ecf0f1;
   padding: 3px 0px 5px 15px;
 }
 
 /*********** side nav legend **********/
 .side-legend {
   background-color: #fff;
-  bottom: 300px;
+  bottom: 400px;
   border-radius: 0px 7px 7px 0px;
-  height: 50px;
+  height: 150px;
   left: -90px;
   position: fixed;
   width: 100px;
