@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 ////////// All Global Vars///////
 
 var stuff; //IMPORTANT!!!!
+=======
+var fligth_data; //IMPORTANT!!!!
+>>>>>>> 04b1765ee560b3ac66a02902c745c1cd1fea76af
 var timer;
 var $airport_selector;
 
@@ -119,19 +123,19 @@ $(function() {
 //   }
 // }
 //////////////// D3 stuff ///////////////////////
-function dataSwitch() {
-  clearInterval(timer)
-  var t = 0
-  timer = setInterval(function(){
-    console.log(t);
-    console.log(stuff[t]);
-    t++;
-    if (t == 97) {
-      clearInterval(timer)
-    }
-  },625)
+// function dataSwitch() {
+//   clearInterval(timer)
+//   var t = 0
+//   timer = setInterval(function(){
+//     console.log(t);
+//     console.log(stuff[t]);
+//     t++;
+//     if (t == 97) {
+//       clearInterval(timer)
+//     }
+//   },625)
 
-}
+// }
 
 //////////////// Parallax /////////////////
 
@@ -166,6 +170,8 @@ $(function(){
     };
   });
 })
+
+
 
 
 

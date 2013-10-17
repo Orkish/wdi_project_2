@@ -4,13 +4,9 @@
   position: fixed;
   height: 1100px;
   width: 100%;
-<<<<<<< HEAD
-  font-family: 'Lato', sans-serif;
-=======
   top: 0;
   left: 0;
   z-index: -1;
->>>>>>> 4910da8c5475b6164e482a386e8105eeea5b3892
 }
 
 #splash {
@@ -80,9 +76,17 @@
   width: 100%;
 }
 
+
+
 /************ map **************/
+<<<<<<< HEAD
 body { /*** fix this tag css **/
   margin: 0;
+=======
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+>>>>>>> 04b1765ee560b3ac66a02902c745c1cd1fea76af
 }
 
 path {
@@ -147,11 +151,12 @@ div.animate_black {
 }
 
 #map-div {
-  z-index:4;
+  z-index: 3;
 }
 
-#flightpaths {
+#flight-paths {
   z-index: 5;
+  position: absolute;
 }
 
 /*********** bootstrap top nav **********/
