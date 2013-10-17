@@ -4,9 +4,13 @@
   position: fixed;
   height: 1100px;
   width: 100%;
+<<<<<<< HEAD
+  font-family: 'Lato', sans-serif;
+=======
   top: 0;
   left: 0;
   z-index: -1;
+>>>>>>> 4910da8c5475b6164e482a386e8105eeea5b3892
 }
 
 #splash {
@@ -126,6 +130,19 @@ div.animate_black {
   margin: 0px 10px 0px 10px;
   /*width: 100%;*/
   z-index: -1;
+}
+
+#index-wrapper{
+  height: 800px;
+  width: 100px;
+}
+
+#map-div {
+  z-index:4;
+}
+
+#flightpaths {
+  z-index: 5;
 }
 
 /*********** bootstrap top nav **********/
