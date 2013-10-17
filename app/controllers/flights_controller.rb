@@ -3,7 +3,6 @@ class FlightsController < ApplicationController
 	require 'open-uri'
 	require 'time'
 	require 'continent'
-	require 'mechanize'
 	
 	def data
 		@flights = Flight.all
