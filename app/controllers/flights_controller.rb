@@ -5,6 +5,9 @@ class FlightsController < ApplicationController
 	require 'continent'
 	require 'mechanize'
 	
+	def data
+		@flights = Flight.all
+	end
 
 	def index
 		@flights = Flight.all		
