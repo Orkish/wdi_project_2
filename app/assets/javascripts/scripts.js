@@ -1,5 +1,5 @@
 ////////// All Global Vars///////
-
+// var svg;
 var stuff; //IMPORTANT!!!!
 var flight_data; //IMPORTANT!!!!
 var timer;
@@ -97,14 +97,16 @@ function animateLegendOut(){
 
 ////////////// Background Trans ////////////////////
 
+
 $(function() {
-    setTimeout(function(){
-      $('.transition').addClass('animate_white')
-    }, 7000)
-    setTimeout(function(){
-      $('.transition').addClass('animate_black')
-    }, 20000)
+  setTimeout(function(){
+    $('.transition').addClass('animate_white')
+  }, 2500)
+  setTimeout(function(){
+    $('.transition').addClass('animate_black')
+  }, 50000)
 });
+
 
 //////////////// Play/Stop Button /////////////////
 
@@ -120,6 +122,16 @@ $(function() {
 //   }
 // }
 //////////////// D3 stuff ///////////////////////
+// $(function(){
+//   svg = d3.select("#flights-path")
+//     .append("svg")
+//     .attr("width", 500)
+//     .attr("height", 1000);
+// })
+
+
+
+
 // function dataSwitch() {
 //   clearInterval(timer)
 //   var t = 0
@@ -136,15 +148,7 @@ $(function() {
 
 //////////////// Parallax /////////////////
 
-$(document).ready(function() {
-  $(window).scroll(function(e){
-    parallax();
-  });
-  function parallax() {
-    var scrolled = $(window).scrollTop();
-    $('.bg').css('top', -(scrolled * 0.15) + 'px');
-  }
-});
+/// check load page ///
 
 //////////// Dropdown&restart menu //////////////
 

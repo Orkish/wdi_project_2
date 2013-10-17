@@ -11,6 +11,17 @@
 <br />
 <br />
 <br />
+<script>
+ $(document).ready(function() {
+  $(window).scroll(function(e){
+    parallax();
+  });
+  function parallax() {
+    var scrolled = $(window).scrollTop();
+    $('.bg').css('top', -(scrolled * 0.20) + 'px');
+  }
+});
+</script>
 
 
 <div class="text-center" id="load">
