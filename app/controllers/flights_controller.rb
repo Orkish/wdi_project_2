@@ -37,6 +37,88 @@ class FlightsController < ApplicationController
 		# end
 		
 	end
+
+	def test2
+		counter = 0
+		final_array = []
+		while counter < 97
+			start_time = (Time.new(2000, 1, 1, 0, 0, 0).utc - 5.hours) + counter * 15.minutes # start_time is 00:00
+			end_time = (Time.new(2000, 1, 1, 0, 0, 0).utc - 5.hours + 15.minutes) + counter * 15.minutes # end_time is -23:45
+			flights = Flight.where(:departure_time => start_time...end_time)
+			flight_array = []
+			flights.each do |flight|
+				flight_array << flight.continent
+				puts flight
+			end
+			counter+= 1
+			final_array << flight_array
+		end
+		header = "Test this mutha!"
+		file = "my_file.csv"
+		File.open(file, "w") do |csv|
+			csv << header
+			csv << "\n"
+			final_array.each do |f|
+				csv << f
+				csv << "\n"
+			end
+		end
+		redirect_to '/flights/1'
+	end
+
+	def desperation
+		counter = 0
+		n = 0
+		obj = {}
+		final_array = []
+		# flight_hash = {}
+		while counter < 97
+			start_time = (Time.new(2000, 1, 1, 0, 0, 0).utc - 5.hours) + counter * 15.minutes # start_time is 00:00
+			end_time = (Time.new(2000, 1, 1, 0, 0, 0).utc - 5.hours + 15.minutes) + counter * 15.minutes # end_time is -23:45
+			flights = Flight.where(:departure_time => start_time...end_time)
+			flight_array = []
+			flights.each do |flight|
+				case flight.continent
+				when "NA"
+					value = 1
+				when "EU"
+					value = 2
+				when "AS"
+					value = 3
+				when "AF"
+					value = 4
+				when "SA"
+					value = 5
+				else
+					value = 1
+				end
+				flight_array << value
+				puts flight
+			end
+			# flight_hash["t#{counter}"] = flight_array
+			counter += 1
+			final_array << flight_array
+		end
+		while n < 97 do
+			# obj[:"t#{n}"] = final_array[n]
+			obj[:"#{n}"] = final_array[n]
+			n += 1
+		end
+		# obj = final_array.map do |f|
+		# 	{:"t#{n}"=> f}
+		# 	n += 1
+		# end
+		json = obj.to_json
+		file = "flights.json"
+		File.open(file, "w+") do |stuff|
+			stuff << json
+		end
+		redirect_to "/flights/1"
+	end
+
+
+end # ends class
+
 	# def test
 	# 	prev_date = Date.today.prev_day.to_s
 	# 	m = 0
@@ -82,7 +164,7 @@ class FlightsController < ApplicationController
 	# 	binding.pry
 	# end  #ends def test
 
-end # ends class
+
 
 
 	########################SEED FILE CONTROLLER TEST###############################

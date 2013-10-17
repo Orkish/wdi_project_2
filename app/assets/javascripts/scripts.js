@@ -1,3 +1,7 @@
+var stuff; //IMPORTANT!!!!
+var timer;
+
+//--------------------
 var counter = 0;
 var newark_data = {};
 
@@ -31,7 +35,38 @@ $(function(){
           }
         });
       }, 600)
+
   })
+
+  // d3.csv("/my_file.csv", function(data) {
+  //   console.log(data);
+  // })
+  $("#ajax-two").on("click", function(){
+    $.ajax({
+      url: '/desperation',
+      method: "GET"
+    })
+  })
+
+  d3.json("/flights.json",function(data) {
+    stuff = data;
+  })
+
+
+
+  // $("#ajax-two").on("click", function(){
+  //   $.ajax({
+  //     url: '/test2'
+  //     method: "GET",
+  //     dataType: "csv"
+  //   })
+  //   .done(function(data){
+  //     console.log(data);
+  //     console.log(counter);
+  //     newark_data["t" + counter] = data; 
+  //     counter++;
+  //   });
+  // })
 });
 //////////////// side nav legend //////////////////
 
@@ -81,7 +116,20 @@ $(function() {
 //   }
 // }
 
+//////////////// D3 stuff ///////////////////////
+function dataSwitch() {
+  clearInterval(timer)
+  var t = 0
+  timer = setInterval(function(){
+    console.log(t);
+    console.log(stuff[t]);
+    t++;
+    if (t == 97) {
+      clearInterval(timer)
+    }
+  },625)
 
+}
 
 
 
