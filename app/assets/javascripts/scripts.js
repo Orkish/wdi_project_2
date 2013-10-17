@@ -97,14 +97,9 @@ function animateLegendOut(){
 
 ////////////// Background Trans ////////////////////
 
-$(function() {
-    setTimeout(function(){
-      $('.transition').addClass('animate_white')
-    }, 7000)
-    setTimeout(function(){
-      $('.transition').addClass('animate_black')
-    }, 20000)
-});
+
+//check load page//
+
 
 //////////////// Play/Stop Button /////////////////
 
@@ -152,7 +147,7 @@ $(document).ready(function() {
   });
   function parallax() {
     var scrolled = $(window).scrollTop();
-    $('.bg').css('top', -(scrolled * 0.15) + 'px');
+    $('.bg').css('top', -(scrolled * 0.20) + 'px');
   }
 });
 
