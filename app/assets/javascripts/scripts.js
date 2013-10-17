@@ -1,5 +1,9 @@
+////////// All Global Vars///////
+
 var stuff; //IMPORTANT!!!!
+var fligth_data; //IMPORTANT!!!!
 var timer;
+var $airport_selector;
 
 //--------------------
 var counter = 0;
@@ -116,19 +120,19 @@ $(function() {
 //   }
 // }
 //////////////// D3 stuff ///////////////////////
-function dataSwitch() {
-  clearInterval(timer)
-  var t = 0
-  timer = setInterval(function(){
-    console.log(t);
-    console.log(stuff[t]);
-    t++;
-    if (t == 97) {
-      clearInterval(timer)
-    }
-  },625)
+// function dataSwitch() {
+//   clearInterval(timer)
+//   var t = 0
+//   timer = setInterval(function(){
+//     console.log(t);
+//     console.log(stuff[t]);
+//     t++;
+//     if (t == 97) {
+//       clearInterval(timer)
+//     }
+//   },625)
 
-}
+// }
 
 //////////////// Parallax /////////////////
 
@@ -141,6 +145,31 @@ $(document).ready(function() {
     $('.bg').css('top', -(scrolled * 0.15) + 'px');
   }
 });
+
+//////////// Dropdown&restart menu //////////////
+
+$(function(){
+  $('.restart-button').on('click', function(){
+    $airport_selector = $("select[name=airportlist]").val();
+    switch($airport_selector) {
+      case "0":
+        console.log("you selected 0");
+        break;
+      case "1":
+        console.log("you selected 1");
+        break;
+      case "2":
+        console.log("you selected 2");
+        break;
+      case "3":
+        console.log("you selected 3");
+        break;
+    };
+  });
+})
+
+
+
 
 
 
