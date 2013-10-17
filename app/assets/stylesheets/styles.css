@@ -3,6 +3,7 @@ body {
   background-image: url("load_clouds.jpg");
   height: 100%;
   width: 100%;
+  font-family: 'Lato', sans-serif;
 }
 
 #splash {
@@ -84,6 +85,19 @@ div.animate_black {
 .map {
   width: 100%;
   z-index: -1;
+}
+
+#index-wrapper{
+  height: 800px;
+  width: 100px;
+}
+
+#map-div {
+  z-index:4;
+}
+
+#flightpaths {
+  z-index: 5;
 }
 
 /*********** bootstrap top nav **********/
