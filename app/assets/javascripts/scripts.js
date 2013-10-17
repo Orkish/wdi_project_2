@@ -1,7 +1,7 @@
 ////////// All Global Vars///////
-
+// var svg;
 var stuff; //IMPORTANT!!!!
-var fligth_data; //IMPORTANT!!!!
+var flight_data; //IMPORTANT!!!!
 var timer;
 var $airport_selector;
 
@@ -53,7 +53,7 @@ $(function(){
   })
 
   d3.json("/flights.json",function(data) {
-    stuff = data;
+    flight_data = data;
   })
 
 
@@ -120,6 +120,16 @@ $(function() {
 //   }
 // }
 //////////////// D3 stuff ///////////////////////
+// $(function(){
+//   svg = d3.select("#flights-path")
+//     .append("svg")
+//     .attr("width", 500)
+//     .attr("height", 1000);
+// })
+
+
+
+
 // function dataSwitch() {
 //   clearInterval(timer)
 //   var t = 0
