@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 ////////// All Global Vars///////
 
 var stuff; //IMPORTANT!!!!
-=======
 var fligth_data; //IMPORTANT!!!!
->>>>>>> 04b1765ee560b3ac66a02902c745c1cd1fea76af
 var timer;
 var $airport_selector;
 

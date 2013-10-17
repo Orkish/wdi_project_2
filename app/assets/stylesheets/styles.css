@@ -79,14 +79,10 @@
 
 
 /************ map **************/
-<<<<<<< HEAD
-body { /*** fix this tag css **/
-  margin: 0;
-=======
+
 body {
-    font-family: 'Lato', sans-serif;
-    margin: 0;
->>>>>>> 04b1765ee560b3ac66a02902c745c1cd1fea76af
+  font-family: 'Lato', sans-serif;
+  margin: 0;
 }
 
 path {
