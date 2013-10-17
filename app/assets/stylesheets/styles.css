@@ -4,13 +4,9 @@
   position: fixed;
   height: 1100px;
   width: 100%;
-<<<<<<< HEAD
-  font-family: 'Lato', sans-serif;
-=======
   top: 0;
   left: 0;
   z-index: -1;
->>>>>>> 4910da8c5475b6164e482a386e8105eeea5b3892
 }
 
 #splash {
@@ -66,7 +62,8 @@
 
 /************ map **************/
 body {
-  margin: 0;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
 }
 
 path {
