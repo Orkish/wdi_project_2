@@ -19,20 +19,17 @@
 
 
 
-/************ body *************/
+/************ body index.html.erb *************/
 
 .air-port-button {
+  /*border: 1px solid;*/
   height: 41px;
   padding-top: 5px;
   width: 205px;
 }
 
-
-.pause-button {
-  margin-bottom: 5px;
-}
-
 .restart-button {
+  /*border: 1px solid;*/
   margin-top: 5px;
   width: 205px;
 }
@@ -41,12 +38,64 @@
   /*border: 1px solid black;*/
   width: 350px;
   float: left;
-  margin-left: 25px;
-  margin-top: 55px;
+  margin-left: 60px;
+  
 }
 
 .bullet-div {
   float: left;
+}
+
+.h1-title {
+  color: rgba(52, 73, 94,1.0);
+  /*border: 1px solid;*/
+  margin-left: 50px;
+  margin-right: 30px;
+}
+
+.nav {
+  /*border: 1px solid;*/
+  height: 90px;
+  margin-left: 40px;
+  width: 92%;
+}
+
+.nav-li {
+  /*border: 1px solid;*/
+  margin-top: 10px;
+}
+
+.nav-split {
+  /*border: 1px solid;*/
+  margin-top: 17px;
+}
+
+#mantra {
+  margin-top: 55px;
+  margin-left: 50px;
+  color: rgba(52, 73, 94,1.0);
+}
+
+.mantra {
+  /*border: 1px solid;*/
+}
+
+.nav-line {
+  /*border: 1px solid;*/
+  height: 2px;
+  margin-left: 50px;
+  margin-top: -10px;
+  width: 90%;
+}
+
+.creators {
+  color: rgba(26, 188, 156,1.0);
+  font-size: 10px;
+  margin-left: 300px;
+}
+
+#ampersand {
+  color: rgba(211, 84, 0,1.0);
 }
 
 .title {
@@ -60,17 +109,16 @@
 .body-title {
   color: rgba(211, 84, 0,1.0);
   float: left;
-  padding-left: 10px;
 }
 
 .body-text {
-  /*border: 1px solid;*/
+  border: 1px solid;
   border-radius: 10px;
   color: rgba(26, 188, 156,1.0);
   padding: 10px;
   margin-top: 10px;
-  margin-left: 500px;
-  margin-right: 30px;
+  margin-left: 450px;
+  margin-right: 40px;
   margin-bottom: 10px;
 }
 
@@ -180,3 +228,26 @@ ul {
   width: 100px;
   z-index: 10000;
 }
+
+/*********** timer *************/
+
+.timer-clock {
+  height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
