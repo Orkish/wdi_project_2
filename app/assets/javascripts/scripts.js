@@ -227,7 +227,21 @@ $(function(){
         dataSwitchLga();
         break;
     }
+
+      $('.transition').removeClass;
+      $('.transition').css("background-color", "#2c3e50");
+      setTimeout(function(){
+        $('.transition').addClass('animate_white');
+      }, 30000);
+      setTimeout(function(){
+        $('.transition').addClass('animate_black');
+      }, 60000);
+
   });
+
+
+  
+  // });
 });
 
 /////////////Index.html dropdown///////////////////

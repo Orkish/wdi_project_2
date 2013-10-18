@@ -295,6 +295,12 @@ ul {
   color: rgb(52, 152, 219);
 }
 
+/************About us*********/
+#aboutus {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
 /*********** timer *************/
 
 /*.timer-clock {
