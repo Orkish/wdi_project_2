@@ -29,18 +29,30 @@ function allAirports () {
 $(function(){
   $("h1").hide();
   setTimeout(function(){
+<<<<<<< HEAD
           $("h1").fadeIn("slow");
+=======
+    $("h1").fadeIn("slow");
+>>>>>>> 60cd61b7cacc24ce4ba358d673ad717b534d1150
   }, 500);
 
   $("body").hide();
   setTimeout(function(){
+<<<<<<< HEAD
           $("body").fadeIn(500);
+=======
+    $("body").fadeIn(500);
+>>>>>>> 60cd61b7cacc24ce4ba358d673ad717b534d1150
   }, 200);
 
 
 
   $("#ajax-one").on("click", function(){
+<<<<<<< HEAD
           counter = 0;
+=======
+    counter = 0;
+>>>>>>> 60cd61b7cacc24ce4ba358d673ad717b534d1150
       var timer = setInterval(function(){ 
         $.ajax({
           url: '/flights/' + counter,
@@ -100,26 +112,26 @@ $(function(){
 });
 //////////////// side nav legend //////////////////
 
-// $(document).ready(function(){
-//   $('#side-legend').hover(function(){
-//     animateLegendIn();
-//   }, function(){
-//     animateLegendOut();
-//   });
-// });
+$(document).ready(function(){
+  $('#side-legend').hover(function(){
+    animateLegendIn();
+  }, function(){
+    animateLegendOut();
+  });
+});
 
-// function animateLegendIn(){
-//   $side_legend = $('#side-legend');
-//   $side_legend.stop().animate({left: '0px', opacity: .7}, 1000, function(){
-//     $side_legend.addClass('active');
-//   });
-// };
+function animateLegendIn(){
+  $side_legend = $('#side-legend');
+  $side_legend.stop().animate({left: '0px', opacity: .7}, 1000, function(){
+    $side_legend.addClass('active');
+  });
+};
 
-// function animateLegendOut(){
-//   $side_legend = $('#side-legend');
-//   $side_legend.stop().animate({left: '-90px', opacity: .5}, 1000)
-//   $side_legend.removeClass('active');
-// };
+function animateLegendOut(){
+  $side_legend = $('#side-legend');
+  $side_legend.stop().animate({left: '-90px', opacity: .5}, 1000)
+  $side_legend.removeClass('active');
+};
 
 ////////////// Background Trans ////////////////////
 
@@ -178,8 +190,22 @@ $(function() {
 
 //////////// Dropdown&restart menu //////////////
 
+
 $(function(){
   $main_selection = $('#main-selection');
+  $map = $('#map-div');
+  
+  function resetTrans(){
+    $map.removeClass();
+    $map.addClass("transition");
+    setTimeout(function(){
+      $map.addClass('animate_white');
+    }, 30000);
+    setTimeout(function(){
+      $('.transition').addClass('animate_black');
+    }, 60000);
+  };
+  
 
   $('#all-selection').on("click", function(){
     $main_selection.text("All Airports");
@@ -204,6 +230,7 @@ $(function(){
         dataSwitchJfk();
         dataSwitchLga();
         dataSwitchEwr();
+        resetTrans();
         break;
       case "Newark Int'l Airport":
         console.log("you selected 1");
@@ -211,6 +238,7 @@ $(function(){
         clearInterval(timer_ewr);
         clearInterval(timer_jfk);
         dataSwitchEwr();
+        resetTrans();
         break;
       case "JFK Int'l Airport":
         console.log("you selected 2");
@@ -218,6 +246,7 @@ $(function(){
         clearInterval(timer_ewr);
         clearInterval(timer_jfk);
         dataSwitchJfk();
+        resetTrans();
         break;
       case "LaGuardia Airport":
         console.log("you selected 3");
@@ -225,23 +254,10 @@ $(function(){
         clearInterval(timer_ewr);
         clearInterval(timer_jfk);
         dataSwitchLga();
+        resetTrans();
         break;
     }
-
-      $('.transition').removeClass;
-      $('.transition').css("background-color", "#2c3e50");
-      setTimeout(function(){
-        $('.transition').addClass('animate_white');
-      }, 30000);
-      setTimeout(function(){
-        $('.transition').addClass('animate_black');
-      }, 60000);
-
   });
-
-
-  
-  // });
 });
 
 /////////////Index.html dropdown///////////////////
