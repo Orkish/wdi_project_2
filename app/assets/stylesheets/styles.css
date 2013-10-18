@@ -154,6 +154,11 @@
   float: left;
 }
 
+.body-div p {
+  margin-bottom: 10px;
+  line-height: 200%;
+}
+
 /************ map **************/
 
 body {
@@ -298,42 +303,3 @@ ul {
 
 
 /************* Clock ************/
-
-.clock{
-  float: left;
-  font-size: 18pt;
-  color: #AAA;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  left:50%;
-  margin: -128px 0 0 -310px;
-}
-.clock p {
-  padding: 20px 10px;
-  box-shadow: 
-    0 -1px 0 0px rgba(255,255,255,0.33), 
-    0 0 0 5px #111,
-    0 10px 30px 0px rgba(0,0,0,0.33);
-  background: #000;
-}
-.clock p span{
-      background: #444444; /* Old browsers */
-      background: -webkit-gradient(linear, 0 0, 0 100%, from(#444444), to(#111111));
-      background: -webkit-linear-gradient(#444444 0%, #111111 100%);
-      background: -moz-linear-gradient(#444444 0%, #111111 100%);
-      background: -o-linear-gradient(#444444 0%, #111111 100%);
-      background: linear-gradient(#444444 0%, #111111 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#111111',GradientType=0 ); /* IE6-9 */
-    box-shadow: 
-        0 0 30px 2px rgba(0,0,0,0.5),
-        0 1px 3px 0px rgba(255,255,255,0.5),
-        inset 0 30px 60px -30px rgba(255,255,255,0.5),
-        inset 0 10px 30px -5px rgba(0,0,0,0.5),
-        inset 0 -155px 0px -100px rgba(0,0,0,0.33),
-        inset 0 -130px 30px -100px rgba(255,255,255,0.15);
-      text-shadow: 1px 2px 5px #000, 0px -1px 0px #FFF;
-      padding: 10px 15px;
-      margin: 0 0 0 5px;
-    }
-
