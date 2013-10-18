@@ -6,7 +6,9 @@ var flight_data_jfk;
 var flight_data_lga;
 var timer_ewr;
 var timer_jfk;
+var timer_lga;
 var $airport_selector;
+var $main_selection;
 
 //--------------------
 
@@ -76,6 +78,10 @@ $(function(){
     flight_data_jfk = jfk;
   })
 
+  d3.json("/flights_lga.json",function(lga) {
+    flight_data_lga = lga;
+  })
+
   allAirports();
 
   // $("#ajax-two").on("click", function(){
@@ -121,10 +127,10 @@ function animateLegendOut(){
 $(function() {
   setTimeout(function(){
     $('.transition').addClass('animate_white')
-  }, 2500)
+  }, 30000)
   setTimeout(function(){
     $('.transition').addClass('animate_black')
-  }, 50000)
+  }, 60000)
 });
 
 
@@ -173,25 +179,63 @@ $(function() {
 //////////// Dropdown&restart menu //////////////
 
 $(function(){
-  $('.restart-button').on('click', function(){
-    $airport_selector = $("select[name=airportlist]").val();
-    switch($airport_selector) {
-      case "0":
-        console.log("you selected 0");
-        break;
-      case "1":
-        console.log("you selected 1");
-        break;
-      case "2":
-        console.log("you selected 2");
-        break;
-      case "3":
-        console.log("you selected 3");
-        break;
-    };
-  });
-})
+  $main_selection = $('#main-selection');
 
+  $('#all-selection').on("click", function(){
+    $main_selection.text("All Airports");
+  });
+  $('#ewr-selection').on("click", function(){
+    $main_selection.text("Newark Int'l Airport")
+  });
+  $('#jfk-selection').on("click", function(){
+    $main_selection.text("JFK Int'l Airport")
+  });
+  $('#lga-selection').on("click", function(){
+    $main_selection.text("LaGuardia Airport")
+  });
+
+  $('#reset').on("click", function(){
+    switch($main_selection.text()) {
+      case "All Airports":
+        console.log("you selected 0");
+        clearInterval(timer_lga);
+        clearInterval(timer_ewr);
+        clearInterval(timer_jfk);
+        dataSwitchJfk();
+        dataSwitchLga();
+        dataSwitchEwr();
+        break;
+      case "Newark Int'l Airport":
+        console.log("you selected 1");
+        clearInterval(timer_lga);
+        clearInterval(timer_ewr);
+        clearInterval(timer_jfk);
+        dataSwitchEwr();
+        break;
+      case "JFK Int'l Airport":
+        console.log("you selected 2");
+        clearInterval(timer_lga);
+        clearInterval(timer_ewr);
+        clearInterval(timer_jfk);
+        dataSwitchJfk();
+        break;
+      case "LaGuardia Airport":
+        console.log("you selected 3");
+        clearInterval(timer_lga);
+        clearInterval(timer_ewr);
+        clearInterval(timer_jfk);
+        dataSwitchLga();
+        break;
+    }
+  });
+});
+
+/////////////Index.html dropdown///////////////////
+$(function(){
+  
+
+
+})
 ///////////////// timer ////////////////
 
 function init ( )

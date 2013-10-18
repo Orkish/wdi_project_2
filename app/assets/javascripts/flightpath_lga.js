@@ -14,14 +14,13 @@ var lga_y = 172;
 function dataSwitchLga() {
   clearInterval(timer_lga);
   var t = 0;
-  timer = setInterval(function() {
+  timer_lga = setInterval(function() {
         d3.select("#routeslga").remove();
         var h = 550;
         var w = 1200;
         var startx = lga_x;
         var starty = lga_y;
         var dataset = flight_data_lga[t];
-        console.log(flight_data_lga[t]);
 
         function getRandomInt (min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -48,8 +47,8 @@ function dataSwitchLga() {
                 .style("stroke-width", 2)
                 .style("opacity", 0.5)
                 .style("stroke", function(d) {
-                    if (d == 1) {
-                        return "rgb(52, 152, 219)";
+                   if (d == 1) {
+                        return "rgb(46, 204, 113)";
                     } else if (d == 2) {
                         return "rgb(241, 196, 15)";
                     } else if (d == 3) {
@@ -57,14 +56,14 @@ function dataSwitchLga() {
                     } else if (d == 4) {
                         return "rgb(142, 68, 173)";
                     } else if (d == 5) {
-                        return "rgb(46, 204, 113)";
+                        return "rgb(52, 152, 219)";
                     }  else {
                         console.log("try again");
                     }
                 })
                     .transition()
                     .attr("transform", "translate")
-                    .duration(500)
+                    .duration(700)
                     .attr("x2", function(d) {
                         if (d == 1) {
                             return -(Math.floor(Math.random()*(w-0+1)+0));
@@ -106,7 +105,7 @@ function dataSwitchLga() {
     if (t == 97) {
       clearInterval(timer_lga);
     }
-  },625)
+  },973.5)
 
 }
 

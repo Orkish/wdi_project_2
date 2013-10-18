@@ -11,22 +11,53 @@
   </li>
   <li><div class="creators"><p>Sam Spector, Wesley Yu, Neel Patel <i id="ampersand">&amp;</i> Winson Yuan</p></div></li>
   <div id="mantra"><p class="mantra">Data Visualization of Flights</p>
+  </li> 
+  <li><div class="creators"><p>
+    Share! &nbsp;&nbsp; <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparse.com" target="_blank">
+  <i class="icon-facebook-sign"></i> 
+</a>
+&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="https://twitter.com/share"><i class="icon-twitter-sign"></i></a>
+   <!--  Samuel Spector, Wesley Yu, Neel Patel <i id="ampersand">&amp;</i> Winson Yuan -->
+
+  </p>
+
+
+  </div></li>
+  <div id="mantra"><p class="mantra">A Data Visualization of Every Flight That Departed from the New York Area Yesterday</p>
+>>>>>>> 4c6e8a3586fae45d0a7c595ff538675a5b204cee
 </ul>
 <hr class="nav-line">
 <div id="map-div" class="transition">
-<div id="flight-paths"> </div>
-
-  <div class="side-legend" id="side-legend">
-    <p class="title">Lorem ipsum</p>
+  <div id="flight-paths">
   </div>
 </div>
-<div class="timer-clock"></div>
+<!-- <div class="timer-clock"></div> -->
+<hr>
 <div class="wrapper-div">
   <div class="button-div">
     <div class="span3 restart-button">
-      <a href="#" class="btn btn-large btn-block btn-danger">Restart</a>
+      <a href="#" class="btn btn-large btn-block btn-danger" id="reset">Restart</a>
     </div>
-    <div class="span3 air-port-button">
+  </div>
+  <div class="btn-group airport-button">
+    <i class="dropdown-arrow dropdown-arrow-inverse"></i>
+    <button class="btn btn-primary" id="main-selection">Choose an Airport...</button>
+    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-inverse">
+      <li class="airport-lines" id="all-selection">All Airports</li>
+      <li class="airport-lines" id="ewr-selection">Newark Int'l Airport</li>
+      <li class="airport-lines" id="jfk-selection">JFK Int'l Airport</li>
+      <li class="airport-lines" id="lga-selection">LaGuardia Airport</li>
+    </ul>
+  </div>
+</div>
+
+
+
+<!--     <div class="span3 air-port-button">
       <select name="airportlist" value="Choose Airport" class="select-block span3 air-port-button btn btn-primary" id="airport-selection">
         <option value="0">Choose Airport</option>
         <option value="1">Newark Int'l</option>
@@ -34,13 +65,39 @@
         <option value="3">LaGuardia</option>
       </select>
     </div>
-  <div class="bullet-div"><!-- bullet point div --></div>
+  </div> -->
+  <div class="side-legend" id="side-legend">
+    <div id="one"><strong>North America</strong></div>
+    <div id="two"><strong>Europe</strong></div>
+    <div id="three"><strong>Asia</strong></div>
+    <div id="four"><strong>Africa</strong></div>
+    <div id="five"><strong>South America</strong></div>
+  </div>
+  <div class="bullet-div">
+<!--     <p>Possible reasons for this difference in our numbers include: </p>
+    <hr>
+    <ul>
+      <li> 
+        High growth rates over the past decade as the industry recovers from record-low traffic of the early aughts
+      </li>
+      <li> 
+        Recent scrutiny of airlines and regulatory bodies relating to congestion-related near misses, such as this <a href="http://www.cnn.com/2013/06/21/travel/nyc-jfk-airliners-too-close/"><strong>incident</strong></a> in late June or <a href="http://abcnews.go.com/WNT/video/miss-yorks-jfk-airport-collision-air-traffic-controller-incident-crash-11770661"><strong>this</strong></a> one in September.  
+      </li>
+    </ul>
+    <hr>
+    <p>
+      The New York Metropolitan area is also served by five(5) other commercial and general aviation airports, a number of military airports, and several helipads. 
+    </p> -->
+  </div>
 
-<div class="body-text body-div"> 
-  <h3 class="body-title title-div">Flights</h3>
-    <p class="info-text"> New York City metropolitan airports handle a staggering volume of flight traffic. The preponderance of readily-available estimates from major newspapers such as the New York Times and airport authorities themselves ballpark daily flights departing from these airports at ~1000-1500/day.</p>
-    <p> Above we have a graphical representation of the most complete data available for flights departing from JFK, LGA and EWR(Newark). Flights are displayed in 15-minute cohorts to vectors approximating their destination continents. </p>
-    <p> Although our primary interest was to provide an interesting visualization of traffic in some of the most active and overcrowded airspace worldwide -over 40% of US flight delays are caused directly or indirectly by cascading effects from NY area problems (GAO 2008)- our data indicates that popularized estimates for flight activity at metro airports are substantially lower than expected: <%= Flight.count %> flights departed from New York between <%= Flight.first.departure_time.to_s.gsub(/....$/,"").gsub(/^............../, "")%> and <%= Flight.last.departure_time.to_s.gsub(/....$/,"").gsub(/^............../, "") %>.
+  <div class="body-div">
+  <!-- <h3 class="body-title body-text title-div">Flights</h3> -->
+    <p id="main-paragraph">
+      <strong>New York City</strong> metropolitan airports handle a staggering volume of flight traffic. The preponderance of readily-available estimates from major newspapers such as the New York Times and airport authorities themselves ballpark daily flights departing from these airports at ~1000-1500/day.
+    </p>
+      <br />
+    <p>  
+      Although our primary interest was to provide an interesting visualization of traffic in some of the most active and overcrowded airspace worldwide -over 40% of US flight delays are caused directly or indirectly by cascading effects from NY area problems (GAO 2008)- our data indicates that popularized estimates for flight activity at metro airports are substantially lower than expected: <%= Flight.count %> between 12:00 am yesterday and 12:00am this morning.
     </p>
     <p>Possible reasons for this difference in our numbers include: </p>
     <ul>
@@ -48,6 +105,7 @@
       <li> Recent scrutiny of airlines and regulatory bodies relating to congestion-related near misses, such as this <a href="http://www.cnn.com/2013/06/21/travel/nyc-jfk-airliners-too-close/">incident</a> in late June or <a href="http://abcnews.go.com/WNT/video/miss-yorks-jfk-airport-collision-air-traffic-controller-incident-crash-11770661">this</a> one in September.</li>
     <p>The New York Metropolitan area is also served by five(5) other commercial and general aviation airports, a number of military airports, and several helipads. </p> 
 </div>
+
 
 
 
