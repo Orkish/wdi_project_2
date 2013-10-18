@@ -78,6 +78,10 @@ $(function(){
     flight_data_jfk = jfk;
   })
 
+  d3.json("/flights_lga.json",function(lga) {
+    flight_data_lga = lga;
+  })
+
   allAirports();
 
   // $("#ajax-two").on("click", function(){
