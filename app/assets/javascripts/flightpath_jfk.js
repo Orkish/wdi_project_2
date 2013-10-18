@@ -44,7 +44,7 @@ function dataSwitchJfk() {
                 .attr("y1", starty)
                 .attr("x2", startx)
                 .attr("y2", starty)
-                .style("stroke-width", 2)
+                .style("stroke-width", 3)
                 .style("opacity", 0.5)
                 .style("stroke", function(d) {
                     if (d == 1) {
