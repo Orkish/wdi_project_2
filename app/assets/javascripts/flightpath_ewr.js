@@ -14,14 +14,13 @@ var lga_y = 172;
 function dataSwitchEwr() {
   clearInterval(timer_ewr);
   var t = 0;
-  timer = setInterval(function() {
+  timer_ewr = setInterval(function() {
         d3.select("#routesewr").remove();
         var h = 550;
         var w = 1200;
         var startx = ewr_x;
         var starty = ewr_y;
         var dataset = flight_data_ewr[t];
-        console.log(flight_data_ewr[t]);
 
         function getRandomInt (min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;

@@ -14,14 +14,13 @@ var lga_y = 172;
 function dataSwitchJfk() {
   clearInterval(timer_jfk);
   var t = 0;
-  timer = setInterval(function() {
+  timer_jfk = setInterval(function() {
         d3.select("#routesjfk").remove();
         var h = 550;
         var w = 1200;
         var startx = jfk_x;
         var starty = jfk_y;
         var dataset = flight_data_jfk[t];
-        console.log(flight_data_jfk[t]);
 
         function getRandomInt (min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;

@@ -8,7 +8,7 @@
   <li class="nav-split">|</li>
   <li class="nav-li">
     <a href="#">Airports</a>
-  </li>
+  </li> 
   <li><div class="creators"><p>Samuel Spector, Wesley Yu, Neel Patel <i id="ampersand">&amp;</i> Winson Yuan</p></div></li>
   <div id="mantra"><p class="mantra">Data Visualization of Flights</p>
 </ul>
@@ -30,16 +30,33 @@
 <div class="wrapper-div">
   <div class="button-div">
     <div class="span3 restart-button">
-      <a href="#" class="btn btn-large btn-block btn-danger">Restart</a>
+      <a href="#" class="btn btn-large btn-block btn-danger" id="reset">Restart</a>
     </div>
-    <div class="span3 air-port-button">
+
+      <div class="btn-group">
+    <i class="dropdown-arrow dropdown-arrow-inverse"></i>
+    <button class="btn btn-primary" id="main-selection">Choose an Airport...</button>
+    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-inverse">
+      <li id="all-selection">All Airports</li>
+      <li id="ewr-selection">Newark Int'l Airport</li>
+      <li id="jfk-selection">JFK Int'l Airport</li>
+      <li id="lga-selection">LaGuardia Airport</li>
+    </ul>
+  </div>
+
+
+
+<!--     <div class="span3 air-port-button">
       <select name="airportlist" value="Choose Airport" class="select-block span3 air-port-button btn btn-primary" id="airport-selection">
         <option value="0">Choose Airport</option>
         <option value="1">Newark Int'l</option>
         <option value="2">JFK Int'l</option>
         <option value="3">LaGuardia</option>
       </select>
-    </div>
+    </div> -->
   <div class="bullet-div"><!-- bullet point div --></div>
 
   <div class="">

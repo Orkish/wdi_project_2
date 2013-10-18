@@ -14,14 +14,13 @@ var lga_y = 172;
 function dataSwitchLga() {
   clearInterval(timer_lga);
   var t = 0;
-  timer = setInterval(function() {
+  timer_lga = setInterval(function() {
         d3.select("#routeslga").remove();
         var h = 550;
         var w = 1200;
         var startx = lga_x;
         var starty = lga_y;
         var dataset = flight_data_lga[t];
-        console.log(flight_data_lga[t]);
 
         function getRandomInt (min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
