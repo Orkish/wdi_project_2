@@ -26,11 +26,22 @@
 
 /************ body index.html.erb *************/
 
-.air-port-button {
+.airport-button {
   /*border: 1px solid;*/
   height: 41px;
   padding-top: 5px;
   width: 205px;
+  margin-left: 45px;
+}
+
+.airport-lines {
+  text-align: center;
+}
+
+.airport-lines:hover{
+  cursor: pointer;
+  background-color: gray;
+  border-radius: 5px;
 }
 
 .restart-button {
@@ -73,12 +84,20 @@
   /*border: 1px solid;*/
 }
 
+#main-selection {
+  width: 159px;
+}
+
 .nav-line {
   /*border: 1px solid;*/
   height: 2px;
   margin-left: 50px;
   margin-top: -10px;
   width: 90%;
+}
+
+#main-paragraph {
+  float: left;
 }
 
 .creators {
@@ -130,9 +149,10 @@
   float: left;
 }
 
-/*.wrapper-div {
-  width: 100%;
-}*/
+.wrapper-div {
+  width: 20%;
+  float: left;
+}
 
 /************ map **************/
 
