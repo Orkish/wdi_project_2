@@ -9,7 +9,7 @@
   <li class="nav-li">
     <a href="#">Airports</a>
   </li>
-  <li><div class="creators"><p>Samuel Spector, Wesley Yu, Neel Patel <i id="ampersand">&amp;</i> Winson Yuan</p></div></li>
+  <li><div class="creators"><p>Sam Spector, Wesley Yu, Neel Patel <i id="ampersand">&amp;</i> Winson Yuan</p></div></li>
   <div id="mantra"><p class="mantra">Data Visualization of Flights</p>
 </ul>
 <hr class="nav-line">
@@ -40,12 +40,12 @@
   <h3 class="body-title title-div">Flights</h3>
     <p class="info-text"> New York City metropolitan airports handle a staggering volume of flight traffic. The preponderance of readily-available estimates from major newspapers such as the New York Times and airport authorities themselves ballpark daily flights departing from these airports at ~1000-1500/day.</p>
     <p> Above we have a graphical representation of the most complete data available for flights departing from JFK, LGA and EWR(Newark). Flights are displayed in 15-minute cohorts to vectors approximating their destination continents. </p>
-    <p> Although our primary interest was to provide an interesting visualization of traffic in some of the most active and overcrowded airspace worldwide -over 40% of US flight delays are caused directly or indirectly by cascading effects from NY area problems (GAO 2008)- our data indicates that popularized estimates for flight activity at metro airports are substantially lower than expected: <%= Flight.count %> flights departed from New York between <%= Flight.first.departure_time.to_s.gsub(/....$/,"").gsub(/^............../, "")%> and <%= Flight.last.departure_time.to_s.gsub(/....$/,"").gsub(/^............../, "")%>.  %>
+    <p> Although our primary interest was to provide an interesting visualization of traffic in some of the most active and overcrowded airspace worldwide -over 40% of US flight delays are caused directly or indirectly by cascading effects from NY area problems (GAO 2008)- our data indicates that popularized estimates for flight activity at metro airports are substantially lower than expected: <%= Flight.count %> flights departed from New York between <%= Flight.first.departure_time.to_s.gsub(/....$/,"").gsub(/^............../, "")%> and <%= Flight.last.departure_time.to_s.gsub(/....$/,"").gsub(/^............../, "") %>.
     </p>
     <p>Possible reasons for this difference in our numbers include: </p>
     <ul>
       <li> High growth rates over the past decade as the industry recovers from record-low traffic of the early aughts;</li>
-      <li> Recent scrutiny of airlines and regulatory bodies relating to congestion-related near misses, such as this <a href="http://www.cnn.com/2013/06/21/travel/nyc-jfk-airliners-too-close/">incident</a> in late June or <a href="http://abcnews.go.com/WNT/video/miss-yorks-jfk-airport-collision-air-traffic-controller-incident-crash-11770661">this</a> one in September.;  </li>
+      <li> Recent scrutiny of airlines and regulatory bodies relating to congestion-related near misses, such as this <a href="http://www.cnn.com/2013/06/21/travel/nyc-jfk-airliners-too-close/">incident</a> in late June or <a href="http://abcnews.go.com/WNT/video/miss-yorks-jfk-airport-collision-air-traffic-controller-incident-crash-11770661">this</a> one in September.</li>
     <p>The New York Metropolitan area is also served by five(5) other commercial and general aviation airports, a number of military airports, and several helipads. </p> 
 </div>
 
