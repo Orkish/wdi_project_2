@@ -1,13 +1,28 @@
 ////////// All Global Vars///////
 // var svg;
 var stuff; //IMPORTANT!!!!
-var flight_data; //IMPORTANT!!!!
-var timer;
+var flight_data_ewr; //IMPORTANT!!!!
+var flight_data_jfk;
+var flight_data_lga;
+var timer_ewr;
+var timer_jfk;
 var $airport_selector;
 
 //--------------------
+
 var counter = 0;
 var newark_data = {};
+
+function allAirports () {
+    dataSwitchEwr();
+    dataSwitchJfk();
+    dataSwitchLga();
+};
+
+
+
+
+//******ON LOAD*******
 
 $(function(){
   $("h1").hide();
@@ -17,8 +32,9 @@ $(function(){
 
   $("body").hide();
   setTimeout(function(){
-  	$("body").fadeIn(2000);
+  	$("body").fadeIn(500);
   }, 200);
+
 
 
   $("#ajax-one").on("click", function(){
@@ -53,10 +69,14 @@ $(function(){
   })
 
   d3.json("/flights.json",function(data) {
-    flight_data = data;
+    flight_data_ewr = data;
   })
 
+  d3.json("/flights_jfk.json",function(jfk) {
+    flight_data_jfk = jfk;
+  })
 
+  allAirports();
 
   // $("#ajax-two").on("click", function(){
   //   $.ajax({
