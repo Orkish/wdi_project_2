@@ -13,7 +13,6 @@ class FlightsController < ApplicationController
 	end
 
 	def sign_out
-		redirect_to '/data'
 	end
 
 

@@ -10,7 +10,7 @@
 	<% administrator_signed_in = false %>
 <%end%>
 
-<% if Administrator.first.current_sign_in_ip? == true %>
+<% if Administrator.last.current_sign_in_ip? == true %>
 <script> 
 window.location.replace("/");
 </script>
