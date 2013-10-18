@@ -93,19 +93,18 @@ function dataSwitchEwr() {
                             } else {
                                 return console.log("fail");
                                 }
+                            })
+                            .each("end", function() {
+                            d3.select(this)
+                                .remove();
                             });
-                        // .each("end", function() {
-                        //     d3.select(this)
-                        //       .transition()
-                        //       .duration(500)
-                        //       .attr("opacity", 0);
-                        //     });
+                        
                         
     t++;
     if (t == 97) {
       clearInterval(timer_ewr);
     }
-  },937.5)
+  },937.5);
 
 }
 
