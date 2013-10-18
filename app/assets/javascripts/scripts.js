@@ -100,26 +100,26 @@ $(function(){
 });
 //////////////// side nav legend //////////////////
 
-$(document).ready(function(){
-  $('#side-legend').hover(function(){
-    animateLegendIn();
-  }, function(){
-    animateLegendOut();
-  });
-});
+// $(document).ready(function(){
+//   $('#side-legend').hover(function(){
+//     animateLegendIn();
+//   }, function(){
+//     animateLegendOut();
+//   });
+// });
 
-function animateLegendIn(){
-  $side_legend = $('#side-legend');
-  $side_legend.stop().animate({left: '0px', opacity: .7}, 1000, function(){
-    $side_legend.addClass('active');
-  });
-};
+// function animateLegendIn(){
+//   $side_legend = $('#side-legend');
+//   $side_legend.stop().animate({left: '0px', opacity: .7}, 1000, function(){
+//     $side_legend.addClass('active');
+//   });
+// };
 
-function animateLegendOut(){
-  $side_legend = $('#side-legend');
-  $side_legend.stop().animate({left: '-90px', opacity: .5}, 1000)
-  $side_legend.removeClass('active');
-};
+// function animateLegendOut(){
+//   $side_legend = $('#side-legend');
+//   $side_legend.stop().animate({left: '-90px', opacity: .5}, 1000)
+//   $side_legend.removeClass('active');
+// };
 
 ////////////// Background Trans ////////////////////
 
@@ -245,7 +245,21 @@ $(function(){
         resetTrans();
         break;
     }
+
+      $('.transition').removeClass;
+      $('.transition').css("background-color", "#2c3e50");
+      setTimeout(function(){
+        $('.transition').addClass('animate_white');
+      }, 30000);
+      setTimeout(function(){
+        $('.transition').addClass('animate_black');
+      }, 60000);
+
   });
+
+
+  
+  // });
 });
 
 /////////////Index.html dropdown///////////////////

@@ -8,5 +8,6 @@ ProjectTwo::Application.routes.draw do
   get '/ewr', to: "flights#ewrjson"
   get '/jfk', to: "flights#jfkjson"
   get '/lga', to: "flights#lgajson"
+  get '/aboutus', to: "flights#aboutus"
   # match '*path' => redirect('/') #  unless Rails.env.development?
 end
