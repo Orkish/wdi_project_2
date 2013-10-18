@@ -97,6 +97,7 @@
   color: rgba(26, 188, 156,1.0);
   font-size: 10px;
   margin-left: 300px;
+  margin-top: 10px;
 }
 
 #ampersand {
@@ -108,7 +109,12 @@
 }
 
 .body-div {
+  border-radius: 10px;
   background: rgba(0, 0, 0, .1);
+  margin-right: 80px;
+  width: 850px;
+  border: 1px solid;
+  color: rgba(26, 188, 156,1.0);
 }
 
 .body-title {
@@ -117,13 +123,9 @@
 }
 
 .body-text {
-  border: 1px solid;
-  border-radius: 10px;
-  color: rgba(26, 188, 156,1.0);
   padding: 10px;
   margin-top: 10px;
-  margin-left: 450px;
-  margin-right: 40px;
+  margin-left: 88%;
   margin-bottom: 10px;
 }
 
@@ -186,7 +188,7 @@ div.animate_black {
   stroke: rgba(127, 140, 141,1.0); stroke-width: 1.8px; 
 }
 
-/*********************************/
+/**************** D3 STUFF *****************/
 
 .map {
   margin: 0px 10px 0px 10px;
@@ -233,16 +235,18 @@ ul {
 }
 
 /*********** side nav legend **********/
+
 .side-legend {
   background-color: rgba(41, 128, 185,1.0);
   bottom: 400px;
   border-radius: 0px 7px 7px 0px;
   height: 150px;
-  left: -90px;
+  left: 0px;
   position: fixed;
   width: 100px;
   z-index: 10000;
 }
+
 
 /*********** timer *************/
 
@@ -251,22 +255,6 @@ ul {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
 /************* Clock ************/
 
 .clock{
@@ -306,4 +294,4 @@ ul {
       padding: 10px 15px;
       margin: 0 0 0 5px;
     }
->>>>>>> 1df03c5e7bcb98e919c02ec9d4e8da03c5c21acf
+
