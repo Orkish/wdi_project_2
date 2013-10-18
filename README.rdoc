@@ -1,2 +1,2 @@
-<h2>BYE~NY</h2>
-<h4>A Data Visualization of Every Flight That Departed From The New York Area Yesterday</h4>
+BYE~NY
+A Data Visualization of Every Flight That Departed From The New York Area Yesterday
