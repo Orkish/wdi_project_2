@@ -29,30 +29,18 @@ function allAirports () {
 $(function(){
   $("h1").hide();
   setTimeout(function(){
-<<<<<<< HEAD
-          $("h1").fadeIn("slow");
-=======
     $("h1").fadeIn("slow");
->>>>>>> 60cd61b7cacc24ce4ba358d673ad717b534d1150
   }, 500);
 
   $("body").hide();
   setTimeout(function(){
-<<<<<<< HEAD
-          $("body").fadeIn(500);
-=======
     $("body").fadeIn(500);
->>>>>>> 60cd61b7cacc24ce4ba358d673ad717b534d1150
   }, 200);
 
 
 
   $("#ajax-one").on("click", function(){
-<<<<<<< HEAD
-          counter = 0;
-=======
     counter = 0;
->>>>>>> 60cd61b7cacc24ce4ba358d673ad717b534d1150
       var timer = setInterval(function(){ 
         $.ajax({
           url: '/flights/' + counter,
