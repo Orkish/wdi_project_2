@@ -137,6 +137,8 @@ function animateLegendOut(){
 
 
 $(function() {
+
+
   setTimeout(function(){
     $('.transition').addClass('animate_white')
   }, 30000)
@@ -256,7 +258,7 @@ $(function(){
         dataSwitchLga();
         resetTrans();
         break;
-    }
+      }
   });
 });
 
