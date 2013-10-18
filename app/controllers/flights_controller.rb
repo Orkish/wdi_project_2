@@ -4,9 +4,17 @@ class FlightsController < ApplicationController
 	require 'time'
 	require 'continent'
 	
+	def data
+		@flights = Flight.all
+	end
+
 	def index
 		@flights = Flight.all		
 	end
+
+	def sign_out
+	end
+
 
 	def test
 		

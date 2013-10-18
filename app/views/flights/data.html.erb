@@ -1,0 +1,24 @@
+<% if administrator_signed_in? %>
+	<h1 id="admin_head"> Welcome Mr. Administrator </h1>
+	<div id="admin_div">
+	<p> There are <%= Flight.count %> flights in database:</p>
+	<% i = 0 %> 
+	<% @flight_object = Flight.all %>
+	<% while i < Flight.count %>
+		<% if	@flight_object[i].airport_id == false %>
+			<% @flight_airport_name = 'mysterious_airport' %>
+		<% elsif @flight_object[i].airport_id == 1 %>
+			<% @flight_airport_name = 'EWR' %>
+		<% elsif @flight_object[i].airport_id == 2 %>
+			<% @flight_airport_name = 'JFK' %>
+		<% elsif @flight_object[i].airport_id == 3 %>
+			<% @flight_airport_name = 'LGA' %>
+		<% end %>
+		<p> <%= @flight_object[i].departure_time.to_s.gsub(/....$/,"").gsub(/^............../, "") %> from <%= @flight_airport_name %> to <%= @flight_object[i].city %></p>
+		<% i += 1 %>
+	<% end %>
+<% else %>
+</div>
+	<h1 id= "admin_div">Nice Try, Bro </h1>
+<% end %>
+
