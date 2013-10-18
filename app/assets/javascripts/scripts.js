@@ -121,10 +121,10 @@ function animateLegendOut(){
 $(function() {
   setTimeout(function(){
     $('.transition').addClass('animate_white')
-  }, 2500)
+  }, 30000)
   setTimeout(function(){
     $('.transition').addClass('animate_black')
-  }, 50000)
+  }, 60000)
 });
 
 
