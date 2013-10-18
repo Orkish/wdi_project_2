@@ -1,16 +1,13 @@
- <ul class="nav nav-pills navbar-top">
+<ul class="nav nav-pills navbar-top">
   <li class="active">
     <h3 class="h1-title">BYE<i class="icon-cloud"></i>NY</h3>
   </li>
   <li class="nav-li">
-    <a href="#">About Us</a>
+    <a href="/aboutus">About Us</a>
   </li>
   <li class="nav-split">|</li>
   <li class="nav-li">
-    <a href="#">Airports</a>
-  </li>
-  <li><div class="creators"><p>Sam Spector, Wesley Yu, Neel Patel <i id="ampersand">&amp;</i> Winson Yuan</p></div></li>
-  <div id="mantra"><p class="mantra">Data Visualization of Flights</p>
+    <a href="/index">Airports</a>
   </li> 
   <li><div class="creators"><p>
     Share! &nbsp;&nbsp; <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparse.com" target="_blank">
@@ -24,8 +21,7 @@
 
 
   </div></li>
-  <div id="mantra"><p class="mantra">A Data Visualization of Every Flight That Departed from the New York Area Yesterday</p>
->>>>>>> 4c6e8a3586fae45d0a7c595ff538675a5b204cee
+  <div id="mantra"><p class="mantra">A Data Visualization of Every Flight That Departed From The New York Area Yesterday</p>
 </ul>
 <hr class="nav-line">
 <div id="map-div" class="transition">
@@ -33,7 +29,17 @@
   </div>
 </div>
 <!-- <div class="timer-clock"></div> -->
-<hr>
+<div class="side-legend" id="side-legend">
+  <div id="one"><strong>North America</strong></div>
+  <div id="two"><strong>Europe</strong></div>
+  <div id="three"><strong>Asia</strong></div>
+  <div id="four"><strong>Africa</strong></div>
+  <div id="five"><strong>South America <i class="icon-cloud"></i></strong></div>
+  <div id="explain">&nbsp;Each line "burst" represents 15 minutes of flights data starting from midnight</div>
+<hr id="separate">
+</div>
+<br />
+<div class="bullet-div">
 <div class="wrapper-div">
   <div class="button-div">
     <div class="span3 restart-button">
@@ -66,16 +72,8 @@
       </select>
     </div>
   </div> -->
-  <div class="side-legend" id="side-legend">
-    <div id="one"><strong>North America</strong></div>
-    <div id="two"><strong>Europe</strong></div>
-    <div id="three"><strong>Asia</strong></div>
-    <div id="four"><strong>Africa</strong></div>
-    <div id="five"><strong>South America</strong></div>
-  </div>
-  <div class="bullet-div">
+  
 <!--     <p>Possible reasons for this difference in our numbers include: </p>
-    <hr>
     <ul>
       <li> 
         High growth rates over the past decade as the industry recovers from record-low traffic of the early aughts
@@ -99,13 +97,7 @@
     <p>  
       Although our primary interest was to provide an interesting visualization of traffic in some of the most active and overcrowded airspace worldwide -over 40% of US flight delays are caused directly or indirectly by cascading effects from NY area problems (GAO 2008)- our data indicates that popularized estimates for flight activity at metro airports are substantially lower than expected: <%= Flight.count %> between 12:00 am yesterday and 12:00am this morning.
     </p>
-    <p>Possible reasons for this difference in our numbers include: </p>
-    <ul>
-      <li> High growth rates over the past decade as the industry recovers from record-low traffic of the early aughts;</li>
-      <li> Recent scrutiny of airlines and regulatory bodies relating to congestion-related near misses, such as this <a href="http://www.cnn.com/2013/06/21/travel/nyc-jfk-airliners-too-close/">incident</a> in late June or <a href="http://abcnews.go.com/WNT/video/miss-yorks-jfk-airport-collision-air-traffic-controller-incident-crash-11770661">this</a> one in September.</li>
-    <p>The New York Metropolitan area is also served by five(5) other commercial and general aviation airports, a number of military airports, and several helipads. </p> 
 </div>
-
 
 
 
