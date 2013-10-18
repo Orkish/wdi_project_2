@@ -98,7 +98,7 @@ function dataSwitchJfk() {
                             d3.select(this)
                                 .remove();
                             });
-                        
+   
     t++;
     if (t == 97) {
       clearInterval(timer_jfk);

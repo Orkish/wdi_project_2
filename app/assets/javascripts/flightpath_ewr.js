@@ -98,6 +98,7 @@ function dataSwitchEwr() {
                             d3.select(this)
                                 .remove();
                             });
+
                         
     t++;
     if (t == 97) {
