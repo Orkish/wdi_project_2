@@ -1,20 +1,28 @@
 ////////// All Global Vars///////
 // var svg;
 var stuff; //IMPORTANT!!!!
-var flight_data; //IMPORTANT!!!!
-var timer;
+var flight_data_ewr; //IMPORTANT!!!!
+var flight_data_jfk;
+var flight_data_lga;
+var timer_ewr;
+var timer_jfk;
 var $airport_selector;
 
 //--------------------
 
-var svg = d3.select("#flight-paths")
-    .append("svg")
-    .attr("id", "routes")
-    .attr("width", 550)
-    .attr("height", 1200);
-
 var counter = 0;
 var newark_data = {};
+
+function allAirports () {
+    dataSwitchEwr();
+    dataSwitchJfk();
+    dataSwitchLga();
+};
+
+
+
+
+//******ON LOAD*******
 
 $(function(){
   $("h1").hide();
@@ -24,8 +32,9 @@ $(function(){
 
   $("body").hide();
   setTimeout(function(){
-  	$("body").fadeIn(2000);
+  	$("body").fadeIn(500);
   }, 200);
+
 
 
   $("#ajax-one").on("click", function(){
@@ -60,10 +69,14 @@ $(function(){
   })
 
   d3.json("/flights.json",function(data) {
-    flight_data = data;
+    flight_data_ewr = data;
   })
 
+  d3.json("/flights_jfk.json",function(jfk) {
+    flight_data_jfk = jfk;
+  })
 
+  allAirports();
 
   // $("#ajax-two").on("click", function(){
   //   $.ajax({
@@ -178,6 +191,44 @@ $(function(){
     };
   });
 })
+
+///////////////// timer ////////////////
+
+function init ( )
+{
+  timeDisplay = document.createTextNode ( "" );
+  document.getElementsByClass("timer-clock").appendChild ( timeDisplay );
+}
+
+function updateClock ( )
+{
+  var currentTime = new Date ( );
+
+  var currentHours = currentTime.getHours ( );
+  var currentMinutes = currentTime.getMinutes ( );
+  var currentSeconds = currentTime.getSeconds ( );
+
+  // Pad the minutes and seconds with leading zeros, if required
+  currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+  currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+
+  // Choose either "AM" or "PM" as appropriate
+  var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+
+  // Convert the hours component to 12-hour format if needed
+  currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+
+  // Convert an hours component of "0" to "12"
+  currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+
+  // Compose the string for display
+  var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+
+  // Update the time display
+  document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+}
+
+
 
 
 
