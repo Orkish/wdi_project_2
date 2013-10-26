@@ -24,12 +24,28 @@
   margin: 0px auto;
 }
 
+.parallax-top {
+  height: 250px;
+}
+
+.parallax-bottom {
+  margin-top: 300px
+}
+
 /************ map **************/
 
 
 
 
 /************ body index.html.erb *************/
+u {
+  text-decoration: none;
+  border-bottom: 2px solid;
+}
+
+.legend-cloud {
+  font-size: 1em;
+}
 
 .airport-button {
   /*border: 1px solid;*/
