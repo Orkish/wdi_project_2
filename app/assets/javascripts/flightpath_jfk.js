@@ -13,6 +13,7 @@ var lga_y = 172;
 
 function dataSwitchJfk() {
   clearInterval(timer_jfk);
+  kill();
   var t = 0;
   timer_jfk = setInterval(function() {
         d3.select("#routesjfk").remove();
@@ -102,6 +103,7 @@ function dataSwitchJfk() {
     t++;
     if (t == 97) {
       clearInterval(timer_jfk);
+      kill();
     }
   },937.5);
 

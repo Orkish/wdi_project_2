@@ -19,6 +19,7 @@ function allAirports () {
     dataSwitchEwr();
     dataSwitchJfk();
     dataSwitchLga();
+    clock();
 };
 
 

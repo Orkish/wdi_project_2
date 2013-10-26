@@ -13,6 +13,7 @@ var lga_y = 172;
 
 function dataSwitchEwr() {
   clearInterval(timer_ewr);
+  kill();
   var t = 0;
   timer_ewr = setInterval(function() {
         d3.select("#routesewr").remove();
@@ -103,6 +104,7 @@ function dataSwitchEwr() {
     t++;
     if (t == 97) {
       clearInterval(timer_ewr);
+      kill();
     }
   },937.5);
 
