@@ -13,6 +13,7 @@ var lga_y = 172;
 
 function dataSwitchLga() {
   clearInterval(timer_lga);
+  kill();
   var t = 0;
   timer_lga = setInterval(function() {
         d3.select("#routeslga").remove();
@@ -102,6 +103,7 @@ function dataSwitchLga() {
     t++;
     if (t == 97) {
       clearInterval(timer_lga);
+      kill();
     }
   },973.5);
 
