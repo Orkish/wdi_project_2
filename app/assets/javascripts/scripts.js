@@ -7,6 +7,7 @@ var flight_data_lga;
 var timer_ewr;
 var timer_jfk;
 var timer_lga;
+var transition_timeout;
 var $airport_selector;
 var $main_selection;
 
@@ -125,9 +126,7 @@ function animateLegendOut(){
 
 
 $(function() {
-
-
-  setTimeout(function(){
+  transition_timeout = setTimeout(function(){
     $('.transition').addClass('animate_white')
   }, 26000)
   setTimeout(function(){
@@ -186,6 +185,7 @@ $(function(){
   $map = $('#map-div');
   
   function resetTrans(){
+    clearTimeout(transition_timeout);
     $map.removeClass();
     $map.addClass("transition");
     setTimeout(function(){

@@ -21,7 +21,7 @@ function clock() {
 		if (timer_count < 85500) {
 		timer_count+= 900;
 		parsed_time = (timer_count).toString().toHHMMSS();
-		console.log(parsed_time);
+		// console.log(parsed_time);
 	 }	else {
 		kill();
 		parsed_time = "0".toHHMMSS();
