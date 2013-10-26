@@ -5,9 +5,13 @@ ProjectTwo::Application.routes.draw do
   get '/flights/:counter', to: "flights#test", as: "flights"
   get '/index', to: "flights#index"
   get '/test2', to: "flights#test2"
+  get '/desperation', to: "flights#desperation"
+  get '/data', to: "flights#data"
+  get '/administrators/sign_out', to: "flights#administrators/sign_out"
   get '/ewr', to: "flights#ewrjson"
   get '/jfk', to: "flights#jfkjson"
   get '/lga', to: "flights#lgajson"
   get '/aboutus', to: "flights#aboutus"
+  match '*path' => redirect('/') #  unless Rails.env.development?
   # match '*path' => redirect('/') #  unless Rails.env.development?
 end

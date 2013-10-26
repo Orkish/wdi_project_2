@@ -1,0 +1,17 @@
+<% if administrator_signed_in? %>
+	<h1> Signing out and redirecting to root... </h1>
+	<script> 
+	$.ajax({
+	    url: '/administrators/sign_out',
+	    method: 'DELETE'});
+		
+			// redirect_to login_path
+	</script>
+	<% administrator_signed_in = false %>
+<%end%>
+
+<% if Administrator.last.current_sign_in_ip? == true %>
+<script> 
+window.location.replace("/");
+</script>
+<% end %>
