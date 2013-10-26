@@ -214,12 +214,8 @@ $(function(){
     switch($main_selection.text()) {
       case "All Airports":
         console.log("you selected 0");
-        clearInterval(timer_lga);
-        clearInterval(timer_ewr);
-        clearInterval(timer_jfk);
-        dataSwitchJfk();
-        dataSwitchLga();
-        dataSwitchEwr();
+        allAirports();
+        clock();
         resetTrans();
         break;
       case "Newark Int'l Airport":
@@ -228,6 +224,7 @@ $(function(){
         clearInterval(timer_ewr);
         clearInterval(timer_jfk);
         dataSwitchEwr();
+        clock();
         resetTrans();
         break;
       case "JFK Int'l Airport":
@@ -236,6 +233,7 @@ $(function(){
         clearInterval(timer_ewr);
         clearInterval(timer_jfk);
         dataSwitchJfk();
+        clock();
         resetTrans();
         break;
       case "LaGuardia Airport":
@@ -244,6 +242,7 @@ $(function(){
         clearInterval(timer_ewr);
         clearInterval(timer_jfk);
         dataSwitchLga();
+        clock();
         resetTrans();
         break;
       }

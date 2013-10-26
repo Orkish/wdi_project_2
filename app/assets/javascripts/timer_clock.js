@@ -16,6 +16,7 @@ String.prototype.toHHMMSS = function () {
 };
 
 function clock() {
+	timer_count = 0;
 	display_clock = setInterval(function(){
 		if (timer_count < 85500) {
 		timer_count+= 900;
