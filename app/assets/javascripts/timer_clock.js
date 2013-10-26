@@ -1,5 +1,6 @@
 var timer_count = 0;
 var display_clock;
+var parsed_time;
 
 String.prototype.toHHMMSS = function () {
     var sec_num = parseInt(this, 10); // don't forget the second parm
@@ -15,18 +16,18 @@ String.prototype.toHHMMSS = function () {
 };
 
 function clock() {
-		display_clock = setInterval(function(){
-			if (timer_count < 85500) {
-			timer_count+= 900;
-			var parsed_time = (timer_count).toString().toHHMMSS();
-			console.log(parsed_time);
-		}	else {
-			kill();
-			parsed_time = "0".toHHMMSS();
-			console.log(parsed_time);
-			timer_count = 0;
-		}
-	}, 937.5);
+	display_clock = setInterval(function(){
+		if (timer_count < 85500) {
+		timer_count+= 900;
+		parsed_time = (timer_count).toString().toHHMMSS();
+		console.log(parsed_time);
+	 }	else {
+		kill();
+		parsed_time = "0".toHHMMSS();
+		// console.log(parsed_time);
+		timer_count = 0;
+	 }
+  }, 937.5);
 };
 
 var kill = function(){

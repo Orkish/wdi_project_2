@@ -15,14 +15,13 @@ var $main_selection;
 var counter = 0;
 var newark_data = {};
 
+
 function allAirports () {
     dataSwitchEwr();
     dataSwitchJfk();
     dataSwitchLga();
     clock();
 };
-
-
 
 
 //******ON LOAD*******
@@ -130,10 +129,10 @@ $(function() {
 
   setTimeout(function(){
     $('.transition').addClass('animate_white')
-  }, 30000)
+  }, 26000)
   setTimeout(function(){
     $('.transition').addClass('animate_black')
-  }, 60000)
+  }, 71000)
 });
 
 
@@ -191,10 +190,10 @@ $(function(){
     $map.addClass("transition");
     setTimeout(function(){
       $map.addClass('animate_white');
-    }, 30000);
+    }, 26000);
     setTimeout(function(){
       $('.transition').addClass('animate_black');
-    }, 60000);
+    }, 71000);
   };
   
 

@@ -101,6 +101,7 @@ function dataSwitchJfk() {
                             });
    
     t++;
+    $('#timer-clock').html(parsed_time);
     if (t == 97) {
       clearInterval(timer_jfk);
       kill();
