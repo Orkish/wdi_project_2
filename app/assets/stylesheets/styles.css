@@ -1,3 +1,8 @@
+@font-face {
+  font-family: digital;
+  src: url('/app/assets/fonts/digital.ttf');
+}
+
 /************ splash *************/
 .bg {
   background: url("load_clouds.jpg");
@@ -385,8 +390,18 @@ ul {
 /*********** timer *************/
 
 #timer-clock {
-  height: 40px;
+  color: rgba(52, 73, 94,1.0);
+  /*border: 1px solid black;*/
+  font-size: 2em;
+  margin: 0 auto;  
+  padding: 5px 5px 0px 5px;
+  width: 230px;
 }
 
 
-/************* Clock ************/
+
+
+
+
+
+

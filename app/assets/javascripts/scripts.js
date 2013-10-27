@@ -7,6 +7,7 @@ var flight_data_lga;
 var timer_ewr;
 var timer_jfk;
 var timer_lga;
+var transition_timeout;
 var $airport_selector;
 var $main_selection;
 
@@ -100,13 +101,13 @@ $(function(){
 });
 //////////////// side nav legend //////////////////
 
-$(document).ready(function(){
-  $('#side-legend').hover(function(){
-    animateLegendIn();
-  }, function(){
-    animateLegendOut();
-  });
-});
+// $(document).ready(function(){
+//   $('#side-legend').hover(function(){
+//     animateLegendIn();
+//   }, function(){
+//     animateLegendOut();
+//   });
+// });
 
 function animateLegendIn(){
   $side_legend = $('#side-legend');
@@ -125,9 +126,7 @@ function animateLegendOut(){
 
 
 $(function() {
-
-
-  setTimeout(function(){
+  transition_timeout = setTimeout(function(){
     $('.transition').addClass('animate_white')
   }, 26000)
   setTimeout(function(){
@@ -186,6 +185,7 @@ $(function(){
   $map = $('#map-div');
   
   function resetTrans(){
+    clearTimeout(transition_timeout);
     $map.removeClass();
     $map.addClass("transition");
     setTimeout(function(){
@@ -214,12 +214,8 @@ $(function(){
     switch($main_selection.text()) {
       case "All Airports":
         console.log("you selected 0");
-        clearInterval(timer_lga);
-        clearInterval(timer_ewr);
-        clearInterval(timer_jfk);
-        dataSwitchJfk();
-        dataSwitchLga();
-        dataSwitchEwr();
+        allAirports();
+        clock();
         resetTrans();
         break;
       case "Newark Int'l Airport":
@@ -228,6 +224,7 @@ $(function(){
         clearInterval(timer_ewr);
         clearInterval(timer_jfk);
         dataSwitchEwr();
+        clock();
         resetTrans();
         break;
       case "JFK Int'l Airport":
@@ -236,6 +233,7 @@ $(function(){
         clearInterval(timer_ewr);
         clearInterval(timer_jfk);
         dataSwitchJfk();
+        clock();
         resetTrans();
         break;
       case "LaGuardia Airport":
@@ -244,6 +242,7 @@ $(function(){
         clearInterval(timer_ewr);
         clearInterval(timer_jfk);
         dataSwitchLga();
+        clock();
         resetTrans();
         break;
       }
