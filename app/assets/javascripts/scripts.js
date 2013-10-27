@@ -100,13 +100,13 @@ $(function(){
 });
 //////////////// side nav legend //////////////////
 
-$(document).ready(function(){
-  $('#side-legend').hover(function(){
-    animateLegendIn();
-  }, function(){
-    animateLegendOut();
-  });
-});
+// $(document).ready(function(){
+//   $('#side-legend').hover(function(){
+//     animateLegendIn();
+//   }, function(){
+//     animateLegendOut();
+//   });
+// });
 
 function animateLegendIn(){
   $side_legend = $('#side-legend');
