@@ -1,6 +1,22 @@
 var timer_count = 0;
 var display_clock;
 var parsed_time;
+var parsed_date;
+///////////// Date Formater////////////////
+
+function ISODateString(d){
+  function pad(n){return n<10 ? '0'+n : n}
+  return d.getUTCFullYear()+'-'
+      + pad(d.getUTCMonth()+1)+'-'
+      + pad(d.getUTCDate())
+}
+
+var d = new Date();
+d.setDate(d.getDate() - 1);
+var parsed_date = ISODateString(d);
+console.log(parsed_date);
+
+///////////// Timer Clock ///////////////
 
 String.prototype.toHHMMSS = function () {
     var sec_num = parseInt(this, 10); // don't forget the second parm
@@ -11,7 +27,7 @@ String.prototype.toHHMMSS = function () {
     if (hours   < 10) {hours   = "0"+hours;}
     if (minutes < 10) {minutes = "0"+minutes;}
     if (seconds < 10) {seconds = "0"+seconds;}
-    var time    = 'Time: ' + hours + ':' + minutes // +':'+seconds;
+;    var time    = '<em>Date:</em> ' + parsed_date + ' <em>Time:</em> ' + hours + ':' + minutes; // +':'+seconds;
     return time;
 };
 
