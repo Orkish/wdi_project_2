@@ -11,6 +11,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery.color-2.1.2.min.js
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require d3.v3.min
