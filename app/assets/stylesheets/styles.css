@@ -39,13 +39,18 @@
 }
 
 #instructions-text {
-  font-size: 16px;
-  line-height: 35px;
+  font-family: 'Oxygen', sans-serif;
   margin: 0 auto;
   background: rgba(52, 73, 94, 0.7);
   width: 850px;
   border-radius: 15px;
   padding: 15px;
+}
+
+#instructions-text p{
+    font-size: 20px;
+    line-height: 40px;
+    text-align: inline;
 }
 
 #instructions {
@@ -67,6 +72,10 @@
   width: 125px;
   margin: 0px auto;
   margin-top: 300px;
+}
+
+#space-taker {
+  margin-bottom: 300px;
 }
 
 
