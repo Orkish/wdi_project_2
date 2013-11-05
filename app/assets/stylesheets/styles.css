@@ -399,8 +399,8 @@ ul {
 /*********** timer *************/
 
 #timer-clock {
-  color: rgba(52, 73, 94,1.0);
-  /*border: 1px solid black;*/
+  /*color: rgba(52, 73, 94,1.0);*/
+  color: #e74c3c;
   font-size: 2em;
   margin: 0 auto;  
   padding: 5px 5px 0px 5px;
