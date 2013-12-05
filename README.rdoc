@@ -1,8 +1,6 @@
-
-One liner: We have a data visualzation that displays every flight leaving the 3 major airports.
-
-BYENY: 6368 flights a day from 12:00 am to 12:00 pm. Happy Friday! Who's ready for happy hour?  New York has one of the busiest air spaces in the world and we thought it would be a great idea to show that. We have a 24 hr data visualization to show how many flights are in the air from the 3 major airports EWR JFK LGA! This is our website, BYENY and we are the cuddly bunnies!
-
 BYE~NY
-A Data Visualization of Every Flight That Departed From The New York Area Yesterday
 
+BYE~NY takes every flight that departed yesterday from the three major New York City airports - EWR, JFK, and LGA - and displays them based on their departure time and continent of destination.
+
+
+The animation is portrayed over a 24 hour period. Each "burst" of color represents all of the flights that departed in that 15 minute time period. Furthermore, each line is an individual flight whose continent of destination is represented by the line's color.
