@@ -1,4 +1,4 @@
-BYE~NY
+==BYE~NY
 
 BYE~NY takes every flight that departed yesterday from the three major New York City airports - EWR, JFK, and LGA - and displays them based on their departure time and continent of destination.
 
